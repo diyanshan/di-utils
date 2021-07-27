@@ -1,6 +1,6 @@
 {
-  "name": "di-utils",
-  "version": "1.0.0",
+  "name": "di-shan-utils",
+  "version": "1.0.1",
   "description": "JavaScript 函数库、工具类",
   "main": "dist/index.js",
   "unpkg": "dist/di-utils.umd.min.js",
@@ -63,7 +63,7 @@
     "utils",
     "js-util",
     "js-tool",
-    "di-utils",
+    "di-shan-utils",
     "tools"
   ],
   "author": {
