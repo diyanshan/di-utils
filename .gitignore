@@ -5,6 +5,7 @@ package-lock.json
 yarn.lock
 /*.js
 /*.d.ts
+/docs
 
 # local env files
 .env.local
