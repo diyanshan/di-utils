@@ -1,11 +1,11 @@
 {
   "name": "di-utils",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "JavaScript 函数库、工具类",
-  "main": "index.js",
+  "main": "dist/index.js",
   "unpkg": "dist/di-utils.umd.min.js",
   "jsdelivr": "dist/di-utils.umd.min.js",
-  "typings": "index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-extends/xe-utils.git"
+    "url": ""
   },
   "keywords": [
     "utils",
