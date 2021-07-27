@@ -15,7 +15,7 @@ export declare function countBy<T, C>(list: T[], iterate: (this: C, item: T, ind
 export declare function countBy<T, C>(obj: T, iterate: (this: C, item: any, key: string, obj: T) => string | number, context?: C): { [key: string]: number };
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     countBy: typeof countBy;
   }
 }

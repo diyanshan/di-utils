@@ -5,7 +5,7 @@
 export declare function union(...array: any[]): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     union: typeof union;
   }
 }

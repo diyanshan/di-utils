@@ -6,7 +6,7 @@
 export declare function isEqual(obj1: any, obj2: any): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isEqual: typeof isEqual;
   }
 }

@@ -15,7 +15,7 @@ export declare function mapTree<U, C>(array: any[], iterate: (this: C, item: any
 export declare function mapTree<U, C>(array: any, iterate: (this: C, item: any, index: number, items: any, path: string[], parent: any, nodes: any) => U, options?: MapTreeOptions, context?: C): U[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     mapTree: typeof mapTree;
   }
 }

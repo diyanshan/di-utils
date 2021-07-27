@@ -5,7 +5,7 @@
 export declare function uniqueId(prefix?: string | number | null): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     uniqueId: typeof uniqueId;
   }
 }

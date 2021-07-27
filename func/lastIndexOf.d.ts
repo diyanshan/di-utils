@@ -7,7 +7,7 @@ export declare function lastIndexOf(obj: any[], val: any): number;
 export declare function lastIndexOf(obj: any, val: any): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     lastIndexOf: typeof lastIndexOf;
   }
 }

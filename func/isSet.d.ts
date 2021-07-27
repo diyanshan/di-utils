@@ -5,7 +5,7 @@
 export declare function isSet(val: any): val is Set<any>;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isSet: typeof isSet;
   }
 }

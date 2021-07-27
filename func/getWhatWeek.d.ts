@@ -14,7 +14,7 @@ export declare function getWhatWeek(date: string | Date | number, offset: number
 export declare function getWhatWeek(date: string | Date | number, offset: number, day: number): Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getWhatWeek: typeof getWhatWeek;
   }
 }

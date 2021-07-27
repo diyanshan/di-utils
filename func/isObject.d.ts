@@ -5,7 +5,7 @@
 export declare function isObject(val: any): val is object;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isObject: typeof isObject;
   }
 }

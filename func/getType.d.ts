@@ -5,7 +5,7 @@
 export declare function getType(obj: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getType: typeof getType;
   }
 }

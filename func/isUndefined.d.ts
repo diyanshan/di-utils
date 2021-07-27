@@ -5,7 +5,7 @@
 export declare function isUndefined(val: any): val is undefined;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isUndefined: typeof isUndefined;
   }
 }

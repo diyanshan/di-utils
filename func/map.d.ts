@@ -7,7 +7,7 @@
 export declare function map<T, U, C>(list: T[], iterate: (this: C, item: T, index: number, list: T[]) => U, context?: C): U[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     map: typeof map;
   }
 }

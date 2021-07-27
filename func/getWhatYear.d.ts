@@ -14,7 +14,7 @@ export declare function getWhatYear(date: string | Date | number, offset: number
 export declare function getWhatYear(date: string | Date | number, offset: number, month: number | 'first' | 'last'): Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getWhatYear: typeof getWhatYear;
   }
 }

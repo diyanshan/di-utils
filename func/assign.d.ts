@@ -30,7 +30,7 @@ export declare function assign<T, U, V, W>(target: T, source1: U, source2: V, so
 export declare function assign(target: any, ...sources: any[]): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     assign: typeof assign;
   }
 }

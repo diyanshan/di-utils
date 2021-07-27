@@ -7,7 +7,7 @@
 export declare function bind<C>(callback: (this: C, ...args: any[]) => any, context?: C, ...params: any[]): (this: any, ...args: any[]) => any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     bind: typeof bind;
   }
 }

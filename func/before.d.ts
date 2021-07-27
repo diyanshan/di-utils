@@ -7,7 +7,7 @@
 export declare function before<C>(count: number, callback: (this: C, rests: any[], ...args: any[]) => any, context?: C): (this: any, ...args: any[]) => any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     before: typeof before;
   }
 }

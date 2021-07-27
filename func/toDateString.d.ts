@@ -36,7 +36,7 @@ export declare function toDateString(date: string | Date | number, format: strin
 export declare function toDateString(date: any, format: string | null, options: ToDateStringOptions): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toDateString: typeof toDateString;
   }
 }

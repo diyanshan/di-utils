@@ -6,7 +6,7 @@
 export declare function destructuring<T>(obj: T, ...target: any[]): T;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     destructuring: typeof destructuring;
   }
 }

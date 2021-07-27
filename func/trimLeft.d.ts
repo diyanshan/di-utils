@@ -6,7 +6,7 @@ export declare function trimLeft(str: string): string;
 export declare function trimLeft(str: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     trimLeft: typeof trimLeft;
   }
 }

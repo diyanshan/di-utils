@@ -5,7 +5,7 @@
 export declare function isArguments(val: any): val is IArguments;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isArguments: typeof isArguments;
   }
 }

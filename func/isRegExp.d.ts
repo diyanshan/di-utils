@@ -5,7 +5,7 @@
 export declare function isRegExp(val: any): val is RegExp;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isRegExp: typeof isRegExp;
   }
 }

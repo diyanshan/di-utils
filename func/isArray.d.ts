@@ -5,7 +5,7 @@
 export declare function isArray(val: any): val is any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isArray: typeof isArray;
   }
 }

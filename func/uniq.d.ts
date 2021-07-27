@@ -5,7 +5,7 @@
 export declare function uniq<T>(list: T[]): T[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     uniq: typeof uniq;
   }
 }

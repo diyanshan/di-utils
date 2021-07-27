@@ -5,7 +5,7 @@
 export declare function isWeakSet(val: any): val is WeakSet<any>;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isWeakSet: typeof isWeakSet;
   }
 }

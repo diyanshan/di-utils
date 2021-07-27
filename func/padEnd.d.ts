@@ -8,7 +8,7 @@ export declare function padEnd(str: string, targetLength: number, padString?: st
 export declare function padEnd(str: any, targetLength: number, padString?: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     padEnd: typeof padEnd;
   }
 }

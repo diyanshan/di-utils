@@ -7,7 +7,7 @@ export declare function timestamp(date: string | Date | number, format?: string 
 export declare function timestamp(date: any, format?: string | null): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     timestamp: typeof timestamp;
   }
 }

@@ -6,7 +6,7 @@ export declare function toInteger(num: number | string | null): number;
 export declare function toInteger(num: any): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toInteger: typeof toInteger;
   }
 }

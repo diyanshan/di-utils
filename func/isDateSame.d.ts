@@ -8,7 +8,7 @@ export declare function isDateSame(date1: Date | number | string, date2: Date | 
 export declare function isDateSame(date1: any, date2: any, format?: string | null): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isDateSame: typeof isDateSame;
   }
 }

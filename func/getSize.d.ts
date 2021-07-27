@@ -5,7 +5,7 @@
 export declare function getSize(obj: any): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getSize: typeof getSize;
   }
 }

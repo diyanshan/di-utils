@@ -14,7 +14,7 @@ export declare function isEqualWith(obj1: any, obj2: any): boolean;
 export declare function isEqualWith<T, U>(obj1: T, obj2: U, func: (val1: any, val2: any, key: any, obj1: T, obj2: U) => any): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isEqualWith: typeof isEqualWith;
   }
 }

@@ -5,7 +5,7 @@
 export declare function isMap(val: any): val is Map<any, any>;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isMap: typeof isMap;
   }
 }

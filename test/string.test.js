@@ -1,1026 +1,1026 @@
-const XEUtils = require('../func')
+const DIUtils = require('../func')
 
 describe('String functions', () => {
   test('toValueString()', () => {
     expect(
-      XEUtils.toValueString()
+      DIUtils.toValueString()
     ).toEqual('')
     expect(
-      XEUtils.toValueString(null)
+      DIUtils.toValueString(null)
     ).toEqual('')
     expect(
-      XEUtils.toValueString(undefined)
+      DIUtils.toValueString(undefined)
     ).toEqual('')
     expect(
-      XEUtils.toValueString('')
+      DIUtils.toValueString('')
     ).toEqual('')
     expect(
-      XEUtils.toValueString(0)
+      DIUtils.toValueString(0)
     ).toEqual('0')
     expect(
-      XEUtils.toValueString(-1)
+      DIUtils.toValueString(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.toValueString(123)
+      DIUtils.toValueString(123)
     ).toEqual('123')
     expect(
-      XEUtils.toValueString([])
+      DIUtils.toValueString([])
     ).toEqual('')
     expect(
-      XEUtils.toValueString(/\w/)
+      DIUtils.toValueString(/\w/)
     ).toEqual('/\\w/')
     expect(
-      XEUtils.toValueString({})
+      DIUtils.toValueString({})
     ).toEqual('[object Object]')
     expect(
-      XEUtils.toValueString(function () { })
+      DIUtils.toValueString(function () { })
     ).toEqual('function () {}')
     expect(
-      XEUtils.toValueString(['3e-9'])
+      DIUtils.toValueString(['3e-9'])
     ).toEqual('3e-9')
     expect(
-      XEUtils.toValueString(1e-8)
+      DIUtils.toValueString(1e-8)
     ).toEqual('0.00000001')
     expect(
-      XEUtils.toValueString(-11e-10)
+      DIUtils.toValueString(-11e-10)
     ).toEqual('-0.0000000011')
     expect(
-      XEUtils.toValueString(-11e+10)
+      DIUtils.toValueString(-11e+10)
     ).toEqual('-110000000000')
     expect(
-      XEUtils.toValueString(-11e+20)
+      DIUtils.toValueString(-11e+20)
     ).toEqual('-1100000000000000000000')
     expect(
-      Number(XEUtils.toValueString(-11e+20))
+      Number(DIUtils.toValueString(-11e+20))
     ).toEqual(-11e+20)
     expect(
-      XEUtils.toValueString(+11e-10)
+      DIUtils.toValueString(+11e-10)
     ).toEqual('0.0000000011')
     expect(
-      XEUtils.toValueString(+11e+10)
+      DIUtils.toValueString(+11e+10)
     ).toEqual('110000000000')
     expect(
-      Number(XEUtils.toValueString(+11e+10))
+      Number(DIUtils.toValueString(+11e+10))
     ).toEqual(+11e+10)
     expect(
-      XEUtils.toValueString(+11e+20)
+      DIUtils.toValueString(+11e+20)
     ).toEqual('1100000000000000000000')
     expect(
-      XEUtils.toValueString(123456e-3)
+      DIUtils.toValueString(123456e-3)
     ).toEqual('123.456')
     expect(
-      XEUtils.toValueString(123456e+3)
+      DIUtils.toValueString(123456e+3)
     ).toEqual('123456000')
     expect(
-      XEUtils.toValueString(4567.890e-4)
+      DIUtils.toValueString(4567.890e-4)
     ).toEqual('0.456789')
     expect(
-      Number(XEUtils.toValueString(4567.890e-4))
+      Number(DIUtils.toValueString(4567.890e-4))
     ).toEqual(4567.890e-4)
     expect(
-      XEUtils.toValueString(4567.890e+4)
+      DIUtils.toValueString(4567.890e+4)
     ).toEqual('45678900')
     expect(
-      Number(XEUtils.toValueString(4567.890e+4))
+      Number(DIUtils.toValueString(4567.890e+4))
     ).toEqual(4567.890e+4)
     expect(
-      XEUtils.toValueString(-4567.890e-14)
+      DIUtils.toValueString(-4567.890e-14)
     ).toEqual('-0.0000000000456789')
     expect(
-      XEUtils.toValueString(+4567.890e+14)
+      DIUtils.toValueString(+4567.890e+14)
     ).toEqual('456789000000000000')
     expect(
-      XEUtils.toValueString(+4567.890e+18)
+      DIUtils.toValueString(+4567.890e+18)
     ).toEqual('4567890000000000000000')
     expect(
-      XEUtils.toValueString(3e-9)
+      DIUtils.toValueString(3e-9)
     ).toEqual('0.000000003')
     expect(
-      Number(XEUtils.toValueString(3e-9))
+      Number(DIUtils.toValueString(3e-9))
     ).toEqual(3e-9)
     expect(
-      XEUtils.toValueString(3e+9)
+      DIUtils.toValueString(3e+9)
     ).toEqual('3000000000')
     expect(
-      XEUtils.toValueString(3e+22)
+      DIUtils.toValueString(3e+22)
     ).toEqual('30000000000000000000000')
     expect(
-      Number(XEUtils.toValueString(3e+22))
+      Number(DIUtils.toValueString(3e+22))
     ).toEqual(3e+22)
     expect(
-      XEUtils.toValueString(123e-25)
+      DIUtils.toValueString(123e-25)
     ).toEqual('0.0000000000000000000000123')
     expect(
-      XEUtils.toValueString(123e+25)
+      DIUtils.toValueString(123e+25)
     ).toEqual('1230000000000000000000000000')
     expect(
-      XEUtils.toValueString(0.000003)
+      DIUtils.toValueString(0.000003)
     ).toEqual('0.000003')
     expect(
-      XEUtils.toValueString([123])
+      DIUtils.toValueString([123])
     ).toEqual('123')
     expect(
-      XEUtils.toValueString([123.0000006])
+      DIUtils.toValueString([123.0000006])
     ).toEqual('123.0000006')
   })
 
   test('trim()', () => {
     expect(
-      XEUtils.trim()
+      DIUtils.trim()
     ).toEqual('')
     expect(
-      XEUtils.trim(null)
+      DIUtils.trim(null)
     ).toEqual('')
     expect(
-      XEUtils.trim(undefined)
+      DIUtils.trim(undefined)
     ).toEqual('')
     expect(
-      XEUtils.trim('')
+      DIUtils.trim('')
     ).toEqual('')
     expect(
-      XEUtils.trim('  ')
+      DIUtils.trim('  ')
     ).toEqual('')
     expect(
-      XEUtils.trim(0)
+      DIUtils.trim(0)
     ).toEqual('0')
     expect(
-      XEUtils.trim(123456)
+      DIUtils.trim(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.trim(-1)
+      DIUtils.trim(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.trim([])
+      DIUtils.trim([])
     ).toEqual('')
     expect(
-      XEUtils.trim('0')
+      DIUtils.trim('0')
     ).toEqual('0')
     expect(
-      XEUtils.trim(' abc ')
+      DIUtils.trim(' abc ')
     ).toEqual('abc')
   })
 
   test('trimLeft()', () => {
     expect(
-      XEUtils.trimLeft()
+      DIUtils.trimLeft()
     ).toEqual('')
     expect(
-      XEUtils.trimLeft(null)
+      DIUtils.trimLeft(null)
     ).toEqual('')
     expect(
-      XEUtils.trimLeft(undefined)
+      DIUtils.trimLeft(undefined)
     ).toEqual('')
     expect(
-      XEUtils.trimLeft('')
+      DIUtils.trimLeft('')
     ).toEqual('')
     expect(
-      XEUtils.trimLeft('   ')
+      DIUtils.trimLeft('   ')
     ).toEqual('')
     expect(
-      XEUtils.trimLeft(0)
+      DIUtils.trimLeft(0)
     ).toEqual('0')
     expect(
-      XEUtils.trimLeft(123456)
+      DIUtils.trimLeft(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.trimLeft(-1)
+      DIUtils.trimLeft(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.trimLeft([])
+      DIUtils.trimLeft([])
     ).toEqual('')
     expect(
-      XEUtils.trimLeft('0')
+      DIUtils.trimLeft('0')
     ).toEqual('0')
     expect(
-      XEUtils.trimLeft(' abc ')
+      DIUtils.trimLeft(' abc ')
     ).toEqual('abc ')
   })
 
   test('trimRight()', () => {
     expect(
-      XEUtils.trimRight()
+      DIUtils.trimRight()
     ).toEqual('')
     expect(
-      XEUtils.trimRight(null)
+      DIUtils.trimRight(null)
     ).toEqual('')
     expect(
-      XEUtils.trimRight(undefined)
+      DIUtils.trimRight(undefined)
     ).toEqual('')
     expect(
-      XEUtils.trimRight('')
+      DIUtils.trimRight('')
     ).toEqual('')
     expect(
-      XEUtils.trimRight('   ')
+      DIUtils.trimRight('   ')
     ).toEqual('')
     expect(
-      XEUtils.trimRight(0)
+      DIUtils.trimRight(0)
     ).toEqual('0')
     expect(
-      XEUtils.trimRight(123456)
+      DIUtils.trimRight(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.trimRight(-1)
+      DIUtils.trimRight(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.trimRight([])
+      DIUtils.trimRight([])
     ).toEqual('')
     expect(
-      XEUtils.trimRight('0')
+      DIUtils.trimRight('0')
     ).toEqual('0')
     expect(
-      XEUtils.trimRight(' abc ')
+      DIUtils.trimRight(' abc ')
     ).toEqual(' abc')
   })
 
   test('escape()', () => {
     expect(
-      XEUtils.escape()
+      DIUtils.escape()
     ).toEqual('')
     expect(
-      XEUtils.escape(null)
+      DIUtils.escape(null)
     ).toEqual('')
     expect(
-      XEUtils.escape(undefined)
+      DIUtils.escape(undefined)
     ).toEqual('')
     expect(
-      XEUtils.escape('')
+      DIUtils.escape('')
     ).toEqual('')
     expect(
-      XEUtils.escape(0)
+      DIUtils.escape(0)
     ).toEqual('0')
     expect(
-      XEUtils.escape(123456)
+      DIUtils.escape(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.escape(-1)
+      DIUtils.escape(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.escape([])
+      DIUtils.escape([])
     ).toEqual('')
     expect(
-      XEUtils.escape('<a>link</a>')
+      DIUtils.escape('<a>link</a>')
     ).toEqual('&lt;a&gt;link&lt;/a&gt;')
     expect(
-      XEUtils.escape('<script>alert()</script>')
+      DIUtils.escape('<script>alert()</script>')
     ).toEqual('&lt;script&gt;alert()&lt;/script&gt;')
   })
 
   test('unescape()', () => {
     expect(
-      XEUtils.unescape()
+      DIUtils.unescape()
     ).toEqual('')
     expect(
-      XEUtils.unescape(null)
+      DIUtils.unescape(null)
     ).toEqual('')
     expect(
-      XEUtils.unescape(undefined)
+      DIUtils.unescape(undefined)
     ).toEqual('')
     expect(
-      XEUtils.unescape('')
+      DIUtils.unescape('')
     ).toEqual('')
     expect(
-      XEUtils.unescape(0)
+      DIUtils.unescape(0)
     ).toEqual('0')
     expect(
-      XEUtils.unescape(123456)
+      DIUtils.unescape(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.unescape(-1)
+      DIUtils.unescape(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.unescape([])
+      DIUtils.unescape([])
     ).toEqual('')
     expect(
-      XEUtils.unescape('&lt;a&gt;link&lt;/a&gt;')
+      DIUtils.unescape('&lt;a&gt;link&lt;/a&gt;')
     ).toEqual('<a>link</a>')
     expect(
-      XEUtils.unescape('&lt;script&gt;alert()&lt;/script&gt;')
+      DIUtils.unescape('&lt;script&gt;alert()&lt;/script&gt;')
     ).toEqual('<script>alert()</script>')
   })
 
   test('camelCase()', () => {
     expect(
-      XEUtils.camelCase()
+      DIUtils.camelCase()
     ).toEqual('')
     expect(
-      XEUtils.camelCase(null)
+      DIUtils.camelCase(null)
     ).toEqual('')
     expect(
-      XEUtils.camelCase(undefined)
+      DIUtils.camelCase(undefined)
     ).toEqual('')
     expect(
-      XEUtils.camelCase('')
+      DIUtils.camelCase('')
     ).toEqual('')
     expect(
-      XEUtils.camelCase(0)
+      DIUtils.camelCase(0)
     ).toEqual('0')
     expect(
-      XEUtils.camelCase(123456)
+      DIUtils.camelCase(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.camelCase(-1)
+      DIUtils.camelCase(-1)
     ).toEqual('1')
     expect(
-      XEUtils.camelCase([])
+      DIUtils.camelCase([])
     ).toEqual('')
     expect(
-      XEUtils.camelCase('---project')
+      DIUtils.camelCase('---project')
     ).toEqual('project')
     expect(
-      XEUtils.camelCase('---project----')
+      DIUtils.camelCase('---project----')
     ).toEqual('project')
     expect(
-      XEUtils.camelCase('proJect----')
+      DIUtils.camelCase('proJect----')
     ).toEqual('proJect')
     expect(
-      XEUtils.camelCase('-project-')
+      DIUtils.camelCase('-project-')
     ).toEqual('project')
     expect(
-      XEUtils.camelCase('---project-name')
+      DIUtils.camelCase('---project-name')
     ).toEqual('projectName')
     expect(
-      XEUtils.camelCase('--project-name--')
+      DIUtils.camelCase('--project-name--')
     ).toEqual('projectName')
     expect(
-      XEUtils.camelCase('--project----name--')
+      DIUtils.camelCase('--project----name--')
     ).toEqual('projectName')
     expect(
-      XEUtils.camelCase('project-name')
+      DIUtils.camelCase('project-name')
     ).toEqual('projectName')
     expect(
-      XEUtils.camelCase('projectName')
+      DIUtils.camelCase('projectName')
     ).toEqual('projectName')
     expect(
-      XEUtils.camelCase('AABBC')
+      DIUtils.camelCase('AABBC')
     ).toEqual('aabbc')
     expect(
-      XEUtils.camelCase('AaBBC')
+      DIUtils.camelCase('AaBBC')
     ).toEqual('aaBbc')
     expect(
-      XEUtils.camelCase('AaBBCdfGG')
+      DIUtils.camelCase('AaBBCdfGG')
     ).toEqual('aaBbCdfGg')
   })
 
   test('kebabCase()', () => {
     expect(
-      XEUtils.kebabCase()
+      DIUtils.kebabCase()
     ).toEqual('')
     expect(
-      XEUtils.kebabCase(null)
+      DIUtils.kebabCase(null)
     ).toEqual('')
     expect(
-      XEUtils.kebabCase(undefined)
+      DIUtils.kebabCase(undefined)
     ).toEqual('')
     expect(
-      XEUtils.kebabCase('')
+      DIUtils.kebabCase('')
     ).toEqual('')
     expect(
-      XEUtils.kebabCase(0)
+      DIUtils.kebabCase(0)
     ).toEqual('0')
     expect(
-      XEUtils.kebabCase(123456)
+      DIUtils.kebabCase(123456)
     ).toEqual('123456')
     expect(
-      XEUtils.kebabCase(-1)
+      DIUtils.kebabCase(-1)
     ).toEqual('1')
     expect(
-      XEUtils.kebabCase('----1')
+      DIUtils.kebabCase('----1')
     ).toEqual('1')
     expect(
-      XEUtils.kebabCase([])
+      DIUtils.kebabCase([])
     ).toEqual('')
     expect(
-      XEUtils.kebabCase('aaaa')
+      DIUtils.kebabCase('aaaa')
     ).toEqual('aaaa')
     expect(
-      XEUtils.kebabCase('aaBa')
+      DIUtils.kebabCase('aaBa')
     ).toEqual('aa-ba')
     expect(
-      XEUtils.kebabCase('aAba')
+      DIUtils.kebabCase('aAba')
     ).toEqual('a-aba')
     expect(
-      XEUtils.kebabCase('aaAba')
+      DIUtils.kebabCase('aaAba')
     ).toEqual('aa-aba')
     expect(
-      XEUtils.kebabCase('aaaAba')
+      DIUtils.kebabCase('aaaAba')
     ).toEqual('aaa-aba')
     expect(
-      XEUtils.kebabCase('aABba')
+      DIUtils.kebabCase('aABba')
     ).toEqual('a-a-bba')
     expect(
-      XEUtils.kebabCase('ABaa')
+      DIUtils.kebabCase('ABaa')
     ).toEqual('a-baa')
     expect(
-      XEUtils.kebabCase('ABCaa')
+      DIUtils.kebabCase('ABCaa')
     ).toEqual('ab-caa')
     expect(
-      XEUtils.kebabCase('ABCaaF')
+      DIUtils.kebabCase('ABCaaF')
     ).toEqual('ab-caa-f')
     expect(
-      XEUtils.kebabCase('ABCaaFG')
+      DIUtils.kebabCase('ABCaaFG')
     ).toEqual('ab-caa-fg')
     expect(
-      XEUtils.kebabCase('ABCaaFGK')
+      DIUtils.kebabCase('ABCaaFGK')
     ).toEqual('ab-caa-fgk')
     expect(
-      XEUtils.kebabCase('aABaa')
+      DIUtils.kebabCase('aABaa')
     ).toEqual('a-a-baa')
     expect(
-      XEUtils.kebabCase('VXETable')
+      DIUtils.kebabCase('VXETable')
     ).toEqual('vxe-table')
     expect(
-      XEUtils.kebabCase('Aaa')
+      DIUtils.kebabCase('Aaa')
     ).toEqual('aaa')
     expect(
-      XEUtils.kebabCase('AAaa')
+      DIUtils.kebabCase('AAaa')
     ).toEqual('a-aaa')
     expect(
-      XEUtils.kebabCase('AAAaa')
+      DIUtils.kebabCase('AAAaa')
     ).toEqual('aa-aaa')
     expect(
-      XEUtils.kebabCase('AAAAaa')
+      DIUtils.kebabCase('AAAAaa')
     ).toEqual('aaa-aaa')
     expect(
-      XEUtils.kebabCase('AAAAAaa')
+      DIUtils.kebabCase('AAAAAaa')
     ).toEqual('aaaa-aaa')
     expect(
-      XEUtils.kebabCase('AB')
+      DIUtils.kebabCase('AB')
     ).toEqual('ab')
     expect(
-      XEUtils.kebabCase('ABC')
+      DIUtils.kebabCase('ABC')
     ).toEqual('abc')
     expect(
-      XEUtils.kebabCase('ABCD')
+      DIUtils.kebabCase('ABCD')
     ).toEqual('abcd')
     expect(
-      XEUtils.kebabCase('ABCDE')
+      DIUtils.kebabCase('ABCDE')
     ).toEqual('abcde')
     expect(
-      XEUtils.kebabCase('AaB')
+      DIUtils.kebabCase('AaB')
     ).toEqual('aa-b')
     expect(
-      XEUtils.kebabCase('AaBBBB')
+      DIUtils.kebabCase('AaBBBB')
     ).toEqual('aa-bbbb')
     expect(
-      XEUtils.kebabCase('aaaBBBccc')
+      DIUtils.kebabCase('aaaBBBccc')
     ).toEqual('aaa-bb-bccc')
     expect(
-      XEUtils.kebabCase('BBBffGG')
+      DIUtils.kebabCase('BBBffGG')
     ).toEqual('bb-bff-gg')
     expect(
-      XEUtils.kebabCase('projectName')
+      DIUtils.kebabCase('projectName')
     ).toEqual('project-name')
     expect(
-      XEUtils.kebabCase('ProjectName')
+      DIUtils.kebabCase('ProjectName')
     ).toEqual('project-name')
     expect(
-      XEUtils.kebabCase('-ProjectName-')
+      DIUtils.kebabCase('-ProjectName-')
     ).toEqual('project-name')
     expect(
-      XEUtils.kebabCase('Enter')
+      DIUtils.kebabCase('Enter')
     ).toEqual('enter')
     expect(
-      XEUtils.kebabCase('AABBC')
+      DIUtils.kebabCase('AABBC')
     ).toEqual('aabbc')
     expect(
-      XEUtils.kebabCase('a-bC')
+      DIUtils.kebabCase('a-bC')
     ).toEqual('a-b-c')
     expect(
-      XEUtils.kebabCase('Ac-cc')
+      DIUtils.kebabCase('Ac-cc')
     ).toEqual('ac-cc')
     expect(
-      XEUtils.kebabCase('AAc-cc')
+      DIUtils.kebabCase('AAc-cc')
     ).toEqual('a-ac-cc')
     expect(
-      XEUtils.kebabCase('AAA-cc')
+      DIUtils.kebabCase('AAA-cc')
     ).toEqual('aaa-cc')
     expect(
-      XEUtils.kebabCase('AAAc-cc')
+      DIUtils.kebabCase('AAAc-cc')
     ).toEqual('aa-ac-cc')
     expect(
-      XEUtils.kebabCase('AAA-BBB')
+      DIUtils.kebabCase('AAA-BBB')
     ).toEqual('aaa-bbb')
     expect(
-      XEUtils.kebabCase('AAA-BBbBB')
+      DIUtils.kebabCase('AAA-BBbBB')
     ).toEqual('aaa-b-bb-bb')
     expect(
-      XEUtils.kebabCase('--aaa--bb--')
+      DIUtils.kebabCase('--aaa--bb--')
     ).toEqual('aaa-bb')
     expect(
-      XEUtils.kebabCase('a-b-C')
+      DIUtils.kebabCase('a-b-C')
     ).toEqual('a-b-c')
     expect(
-      XEUtils.kebabCase('a-b-----C')
+      DIUtils.kebabCase('a-b-----C')
     ).toEqual('a-b-c')
     expect(
-      XEUtils.kebabCase('a-b-----CDF')
+      DIUtils.kebabCase('a-b-----CDF')
     ).toEqual('a-b-cdf')
     expect(
-      XEUtils.kebabCase('aaDddddDDDff')
+      DIUtils.kebabCase('aaDddddDDDff')
     ).toEqual('aa-ddddd-dd-dff')
     expect(
-      XEUtils.kebabCase('aaBBffHHHggt--H-HHH-hjJ-J')
+      DIUtils.kebabCase('aaBBffHHHggt--H-HHH-hjJ-J')
     ).toEqual('aa-b-bff-hh-hggt-h-hhh-hj-j-j')
     expect(
-      XEUtils.kebabCase('a-b--bbBBB-bB--xxDDff')
+      DIUtils.kebabCase('a-b--bbBBB-bB--xxDDff')
     ).toEqual('a-b-bb-bbb-b-b-xx-d-dff')
     expect(
-      XEUtils.kebabCase('aAA-bBBBB---bF--Fs')
+      DIUtils.kebabCase('aAA-bBBBB---bF--Fs')
     ).toEqual('a-aa-b-bbbb-b-f-fs')
   })
 
   test('repeat()', () => {
     expect(
-      XEUtils.repeat()
+      DIUtils.repeat()
     ).toEqual('')
     expect(
-      XEUtils.repeat(null)
+      DIUtils.repeat(null)
     ).toEqual('')
     expect(
-      XEUtils.repeat(undefined)
+      DIUtils.repeat(undefined)
     ).toEqual('')
     expect(
-      XEUtils.repeat('')
+      DIUtils.repeat('')
     ).toEqual('')
     expect(
-      XEUtils.repeat(0)
+      DIUtils.repeat(0)
     ).toEqual('')
     expect(
-      XEUtils.repeat([])
+      DIUtils.repeat([])
     ).toEqual('')
     expect(
-      XEUtils.repeat('aaaaa')
+      DIUtils.repeat('aaaaa')
     ).toEqual('')
     expect(
-      XEUtils.repeat('aaaaa', 0)
+      DIUtils.repeat('aaaaa', 0)
     ).toEqual('')
     expect(
-      XEUtils.repeat('aaaaa', null)
+      DIUtils.repeat('aaaaa', null)
     ).toEqual('')
     expect(
-      XEUtils.repeat('aaaaa', undefined)
+      DIUtils.repeat('aaaaa', undefined)
     ).toEqual('')
     expect(
-      XEUtils.repeat('a', 5)
+      DIUtils.repeat('a', 5)
     ).toEqual('aaaaa')
     expect(
-      XEUtils.repeat('ab', 3)
+      DIUtils.repeat('ab', 3)
     ).toEqual('ababab')
   })
 
   test('padStart()', () => {
     expect(
-      XEUtils.padStart()
+      DIUtils.padStart()
     ).toEqual('')
     expect(
-      XEUtils.padStart(null)
+      DIUtils.padStart(null)
     ).toEqual('')
     expect(
-      XEUtils.padStart(undefined)
+      DIUtils.padStart(undefined)
     ).toEqual('')
     expect(
-      XEUtils.padStart('')
+      DIUtils.padStart('')
     ).toEqual('')
     expect(
-      XEUtils.padStart(0)
+      DIUtils.padStart(0)
     ).toEqual('0')
     expect(
-      XEUtils.padStart([])
+      DIUtils.padStart([])
     ).toEqual('')
     expect(
-      XEUtils.padStart(null, 2)
+      DIUtils.padStart(null, 2)
     ).toEqual('  ')
     expect(
-      XEUtils.padStart(null, 6)
+      DIUtils.padStart(null, 6)
     ).toEqual('      ')
     expect(
-      XEUtils.padStart(0, 2)
+      DIUtils.padStart(0, 2)
     ).toEqual(' 0')
     expect(
-      XEUtils.padStart('', 2)
+      DIUtils.padStart('', 2)
     ).toEqual('  ')
     expect(
-      XEUtils.padStart('a', 4)
+      DIUtils.padStart('a', 4)
     ).toEqual('   a')
     expect(
-      XEUtils.padStart('a', 6, undefined)
+      DIUtils.padStart('a', 6, undefined)
     ).toEqual('     a')
     expect(
-      XEUtils.padStart('a', 6, null)
+      DIUtils.padStart('a', 6, null)
     ).toEqual('nullna')
     expect(
-      XEUtils.padStart('a', 6, false)
+      DIUtils.padStart('a', 6, false)
     ).toEqual('falsea')
     expect(
-      XEUtils.padStart('a', 5, 'b')
+      DIUtils.padStart('a', 5, 'b')
     ).toEqual('bbbba')
     expect(
-      XEUtils.padStart('2', 5, 0)
+      DIUtils.padStart('2', 5, 0)
     ).toEqual('00002')
     expect(
-      XEUtils.padStart('2', 5, '0')
+      DIUtils.padStart('2', 5, '0')
     ).toEqual('00002')
   })
 
   test('padEnd()', () => {
     expect(
-      XEUtils.padEnd()
+      DIUtils.padEnd()
     ).toEqual('')
     expect(
-      XEUtils.padEnd(null)
+      DIUtils.padEnd(null)
     ).toEqual('')
     expect(
-      XEUtils.padEnd(undefined)
+      DIUtils.padEnd(undefined)
     ).toEqual('')
     expect(
-      XEUtils.padEnd('')
+      DIUtils.padEnd('')
     ).toEqual('')
     expect(
-      XEUtils.padEnd(0)
+      DIUtils.padEnd(0)
     ).toEqual('0')
     expect(
-      XEUtils.padEnd([])
+      DIUtils.padEnd([])
     ).toEqual('')
     expect(
-      XEUtils.padEnd(null, 2)
+      DIUtils.padEnd(null, 2)
     ).toEqual('  ')
     expect(
-      XEUtils.padEnd(null, 6)
+      DIUtils.padEnd(null, 6)
     ).toEqual('      ')
     expect(
-      XEUtils.padEnd(0, 2)
+      DIUtils.padEnd(0, 2)
     ).toEqual('0 ')
     expect(
-      XEUtils.padEnd('', 2)
+      DIUtils.padEnd('', 2)
     ).toEqual('  ')
     expect(
-      XEUtils.padEnd('a', 4)
+      DIUtils.padEnd('a', 4)
     ).toEqual('a   ')
     expect(
-      XEUtils.padEnd('a', 6, undefined)
+      DIUtils.padEnd('a', 6, undefined)
     ).toEqual('a     ')
     expect(
-      XEUtils.padEnd('a', 6, null)
+      DIUtils.padEnd('a', 6, null)
     ).toEqual('anulln')
     expect(
-      XEUtils.padEnd('a', 6, false)
+      DIUtils.padEnd('a', 6, false)
     ).toEqual('afalse')
     expect(
-      XEUtils.padEnd('a', 5, 'b')
+      DIUtils.padEnd('a', 5, 'b')
     ).toEqual('abbbb')
     expect(
-      XEUtils.padEnd('2', 5, 0)
+      DIUtils.padEnd('2', 5, 0)
     ).toEqual('20000')
     expect(
-      XEUtils.padEnd('2', 5, '0')
+      DIUtils.padEnd('2', 5, '0')
     ).toEqual('20000')
   })
 
   test('startsWith()', () => {
     expect(
-      XEUtils.startsWith()
+      DIUtils.startsWith()
     ).toEqual(false)
     expect(
-      XEUtils.startsWith(0)
+      DIUtils.startsWith(0)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith(-1)
+      DIUtils.startsWith(-1)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith(null)
+      DIUtils.startsWith(null)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith(undefined)
+      DIUtils.startsWith(undefined)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('')
+      DIUtils.startsWith('')
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('abc')
+      DIUtils.startsWith('abc')
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('abc', null)
+      DIUtils.startsWith('abc', null)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('abc', -1)
+      DIUtils.startsWith('abc', -1)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('abc', 'b')
+      DIUtils.startsWith('abc', 'b')
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('abc', 'b', 2)
+      DIUtils.startsWith('abc', 'b', 2)
     ).toEqual(false)
     expect(
-      XEUtils.startsWith('abc', 'a')
+      DIUtils.startsWith('abc', 'a')
     ).toEqual(true)
     expect(
-      XEUtils.startsWith('abc', 'b', 1)
+      DIUtils.startsWith('abc', 'b', 1)
     ).toEqual(true)
   })
 
   test('endsWith()', () => {
     expect(
-      XEUtils.endsWith()
+      DIUtils.endsWith()
     ).toEqual(false)
     expect(
-      XEUtils.endsWith(0)
+      DIUtils.endsWith(0)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith(-1)
+      DIUtils.endsWith(-1)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith(null)
+      DIUtils.endsWith(null)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith(undefined)
+      DIUtils.endsWith(undefined)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('')
+      DIUtils.endsWith('')
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('abc')
+      DIUtils.endsWith('abc')
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('abc', null)
+      DIUtils.endsWith('abc', null)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('abc', -1)
+      DIUtils.endsWith('abc', -1)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('abc', 'a')
+      DIUtils.endsWith('abc', 'a')
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('abc', 'c', 2)
+      DIUtils.endsWith('abc', 'c', 2)
     ).toEqual(false)
     expect(
-      XEUtils.endsWith('abc', 'c')
+      DIUtils.endsWith('abc', 'c')
     ).toEqual(true)
     expect(
-      XEUtils.endsWith('abc', 'b', 2)
+      DIUtils.endsWith('abc', 'b', 2)
     ).toEqual(true)
   })
 
   test('template()', () => {
     expect(
-      XEUtils.template()
+      DIUtils.template()
     ).toEqual('')
     expect(
-      XEUtils.template(null)
+      DIUtils.template(null)
     ).toEqual('')
     expect(
-      XEUtils.template(undefined)
+      DIUtils.template(undefined)
     ).toEqual('')
     expect(
-      XEUtils.template(0)
+      DIUtils.template(0)
     ).toEqual('0')
     expect(
-      XEUtils.template(-1)
+      DIUtils.template(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.template(123)
+      DIUtils.template(123)
     ).toEqual('123')
     expect(
-      XEUtils.template(/\d/)
+      DIUtils.template(/\d/)
     ).toEqual('/\\d/')
     expect(
-      XEUtils.template({})
+      DIUtils.template({})
     ).toEqual('[object Object]')
     expect(
-      XEUtils.template(function () { })
+      DIUtils.template(function () { })
     ).toEqual('function () {}')
     expect(
-      XEUtils.template([])
+      DIUtils.template([])
     ).toEqual('')
     expect(
-      XEUtils.template('0')
+      DIUtils.template('0')
     ).toEqual('0')
     expect(
-      XEUtils.template('[0]')
+      DIUtils.template('[0]')
     ).toEqual('[0]')
     expect(
-      XEUtils.template('{{0}}')
+      DIUtils.template('{{0}}')
     ).toEqual('undefined')
     expect(
-      XEUtils.template('name')
+      DIUtils.template('name')
     ).toEqual('name')
     expect(
-      XEUtils.template('{name')
+      DIUtils.template('{name')
     ).toEqual('{name')
     expect(
-      XEUtils.template('name}name}')
+      DIUtils.template('name}name}')
     ).toEqual('name}name}')
     expect(
-      XEUtils.template('{name}{name}')
+      DIUtils.template('{name}{name}')
     ).toEqual('{name}{name}')
     expect(
-      XEUtils.template('{{name}}')
+      DIUtils.template('{{name}}')
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', null)
+      DIUtils.template('{{name}}', null)
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', undefined)
+      DIUtils.template('{{name}}', undefined)
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', '')
+      DIUtils.template('{{name}}', '')
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', -1)
+      DIUtils.template('{{name}}', -1)
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', 0)
+      DIUtils.template('{{name}}', 0)
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', [])
+      DIUtils.template('{{name}}', [])
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', {})
+      DIUtils.template('{{name}}', {})
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{0}}', [null])
+      DIUtils.template('{{0}}', [null])
     ).toEqual('null')
     expect(
-      XEUtils.template('{{{0}}}', [null])
+      DIUtils.template('{{{0}}}', [null])
     ).toEqual('{null}')
     expect(
-      XEUtils.template('{{  }}', { name: 'test1' })
+      DIUtils.template('{{  }}', { name: 'test1' })
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{ }}')
+      DIUtils.template('{{ }}')
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{0}}', { name: 'test1' })
+      DIUtils.template('{{0}}', { name: 'test1' })
     ).toEqual('undefined')
     expect(
-      XEUtils.template('{{name}}', { name: 'test1' })
+      DIUtils.template('{{name}}', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.template('{{}}', { name: 'test1' })
+      DIUtils.template('{{}}', { name: 'test1' })
     ).toEqual('{{}}')
     expect(
-      XEUtils.template('{{{{name}}}}', { name: 'test1' })
+      DIUtils.template('{{{{name}}}}', { name: 'test1' })
     ).toEqual('{{test1}}')
     expect(
-      XEUtils.template('{{name }}', { name: 'test1' })
+      DIUtils.template('{{name }}', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.template('{{ name}}', { name: 'test1' })
+      DIUtils.template('{{ name}}', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.template('{{ name }}', { name: 'test1' })
+      DIUtils.template('{{ name }}', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.template('{{ name }}{{{ name }}}{{ name }}', { name: 'test1' })
+      DIUtils.template('{{ name }}{{{ name }}}{{ name }}', { name: 'test1' })
     ).toEqual('test1{test1}test1')
     expect(
-      XEUtils.template('{{ 0 }}{{{ 2 }}}{{ 3 }}', [null, 11, 22, 33, 44])
+      DIUtils.template('{{ 0 }}{{{ 2 }}}{{ 3 }}', [null, 11, 22, 33, 44])
     ).toEqual('null{22}33')
     expect(
-      XEUtils.template('{{name}}-{{age}}', { name: 'test1', age: 26 })
+      DIUtils.template('{{name}}-{{age}}', { name: 'test1', age: 26 })
     ).toEqual('test1-26')
     expect(
-      XEUtils.template('{{name}}-{{age}}', [])
+      DIUtils.template('{{name}}-{{age}}', [])
     ).toEqual('undefined-undefined')
     expect(
-      XEUtils.template('{{0}}-{{1}}', [])
+      DIUtils.template('{{0}}-{{1}}', [])
     ).toEqual('undefined-undefined')
     expect(
-      XEUtils.template('{{0}}-{{1}}', [11, '22'])
+      DIUtils.template('{{0}}-{{1}}', [11, '22'])
     ).toEqual('11-22')
     expect(
-      XEUtils.template('{{name}} to {{{age}}}12{3} {{{{sex}}}}', { name: 'test1', age: 26, sex: '男' })
+      DIUtils.template('{{name}} to {{{age}}}12{3} {{{{sex}}}}', { name: 'test1', age: 26, sex: '男' })
     ).toEqual('test1 to {26}12{3} {{男}}')
   })
 
   test('toFormatString()', () => {
     expect(
-      XEUtils.toFormatString()
+      DIUtils.toFormatString()
     ).toEqual('')
     expect(
-      XEUtils.toFormatString(null)
+      DIUtils.toFormatString(null)
     ).toEqual('')
     expect(
-      XEUtils.toFormatString(undefined)
+      DIUtils.toFormatString(undefined)
     ).toEqual('')
     expect(
-      XEUtils.toFormatString(0)
+      DIUtils.toFormatString(0)
     ).toEqual('0')
     expect(
-      XEUtils.toFormatString(-1)
+      DIUtils.toFormatString(-1)
     ).toEqual('-1')
     expect(
-      XEUtils.toFormatString(123)
+      DIUtils.toFormatString(123)
     ).toEqual('123')
     expect(
-      XEUtils.toFormatString(/\d/)
+      DIUtils.toFormatString(/\d/)
     ).toEqual('/\\d/')
     expect(
-      XEUtils.toFormatString({})
+      DIUtils.toFormatString({})
     ).toEqual('[object Object]')
     expect(
-      XEUtils.toFormatString(function () { })
+      DIUtils.toFormatString(function () { })
     ).toEqual('function () {}')
     expect(
-      XEUtils.toFormatString([])
+      DIUtils.toFormatString([])
     ).toEqual('')
     expect(
-      XEUtils.toFormatString('0')
+      DIUtils.toFormatString('0')
     ).toEqual('0')
     expect(
-      XEUtils.toFormatString('[0]')
+      DIUtils.toFormatString('[0]')
     ).toEqual('[0]')
     expect(
-      XEUtils.toFormatString('{{0}}')
+      DIUtils.toFormatString('{{0}}')
     ).toEqual('{undefined}')
     expect(
-      XEUtils.toFormatString('name')
+      DIUtils.toFormatString('name')
     ).toEqual('name')
     expect(
-      XEUtils.toFormatString('{name')
+      DIUtils.toFormatString('{name')
     ).toEqual('{name')
     expect(
-      XEUtils.toFormatString('name}name}')
+      DIUtils.toFormatString('name}name}')
     ).toEqual('name}name}')
     expect(
-      XEUtils.toFormatString('{name}{name}')
+      DIUtils.toFormatString('{name}{name}')
     ).toEqual('undefinedundefined')
     expect(
-      XEUtils.toFormatString('{name}')
+      DIUtils.toFormatString('{name}')
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', null)
+      DIUtils.toFormatString('{name}', null)
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', undefined)
+      DIUtils.toFormatString('{name}', undefined)
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', '')
+      DIUtils.toFormatString('{name}', '')
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', -1)
+      DIUtils.toFormatString('{name}', -1)
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', 0)
+      DIUtils.toFormatString('{name}', 0)
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', [])
+      DIUtils.toFormatString('{name}', [])
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', {})
+      DIUtils.toFormatString('{name}', {})
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{0}', [null])
+      DIUtils.toFormatString('{0}', [null])
     ).toEqual('null')
     expect(
-      XEUtils.toFormatString('{{0}}', [null])
+      DIUtils.toFormatString('{{0}}', [null])
     ).toEqual('{null}')
     expect(
-      XEUtils.toFormatString('{  }', { name: 'test1' })
+      DIUtils.toFormatString('{  }', { name: 'test1' })
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{{ }}')
+      DIUtils.toFormatString('{{ }}')
     ).toEqual('{undefined}')
     expect(
-      XEUtils.toFormatString('{0}', { name: 'test1' })
+      DIUtils.toFormatString('{0}', { name: 'test1' })
     ).toEqual('undefined')
     expect(
-      XEUtils.toFormatString('{name}', { name: 'test1' })
+      DIUtils.toFormatString('{name}', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.toFormatString('{}', { name: 'test1' })
+      DIUtils.toFormatString('{}', { name: 'test1' })
     ).toEqual('{}')
     expect(
-      XEUtils.toFormatString('{{{name}}}', { name: 'test1' })
+      DIUtils.toFormatString('{{{name}}}', { name: 'test1' })
     ).toEqual('{{test1}}')
     expect(
-      XEUtils.toFormatString('{name }', { name: 'test1' })
+      DIUtils.toFormatString('{name }', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.toFormatString('{ name}', { name: 'test1' })
+      DIUtils.toFormatString('{ name}', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.toFormatString('{ name }', { name: 'test1' })
+      DIUtils.toFormatString('{ name }', { name: 'test1' })
     ).toEqual('test1')
     expect(
-      XEUtils.toFormatString('{ name }{{ name }}{ name }', { name: 'test1' })
+      DIUtils.toFormatString('{ name }{{ name }}{ name }', { name: 'test1' })
     ).toEqual('test1{test1}test1')
     expect(
-      XEUtils.toFormatString('{ 0 }{{ 2 }}{ 3 }', [null, 11, 22, 33, 44])
+      DIUtils.toFormatString('{ 0 }{{ 2 }}{ 3 }', [null, 11, 22, 33, 44])
     ).toEqual('null{22}33')
     expect(
-      XEUtils.toFormatString('{name}-{age}', { name: 'test1', age: 26 })
+      DIUtils.toFormatString('{name}-{age}', { name: 'test1', age: 26 })
     ).toEqual('test1-26')
     expect(
-      XEUtils.toFormatString('{name}-{age}', [])
+      DIUtils.toFormatString('{name}-{age}', [])
     ).toEqual('undefined-undefined')
     expect(
-      XEUtils.toFormatString('{0}-{1}', [])
+      DIUtils.toFormatString('{0}-{1}', [])
     ).toEqual('undefined-undefined')
     expect(
-      XEUtils.toFormatString('{0}-{1}', [11, '22'])
+      DIUtils.toFormatString('{0}-{1}', [11, '22'])
     ).toEqual('11-22')
     expect(
-      XEUtils.toFormatString('{name} to {{age}}12{3} {{{sex}}}', { name: 'test1', age: 26, sex: '男', 3: 'xx' })
+      DIUtils.toFormatString('{name} to {{age}}12{3} {{{sex}}}', { name: 'test1', age: 26, sex: '男', 3: 'xx' })
     ).toEqual('test1 to {26}12xx {{男}}')
   })
 })

@@ -5,7 +5,7 @@
 export declare function isDate(val: any): val is Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isDate: typeof isDate;
   }
 }

@@ -7,7 +7,7 @@
 export declare function set(obj: any, property: string | string[], value: any): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     set: typeof set;
   }
 }

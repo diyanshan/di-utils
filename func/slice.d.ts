@@ -7,7 +7,7 @@
 export declare function slice<T>(array: T[], start: number, end?: number): T[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     slice: typeof slice;
   }
 }

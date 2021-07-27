@@ -13,7 +13,7 @@ export interface FilterTreeOptions {
 export declare function filterTree<T, C>(list: T[], iterate: (this: C, item: T, index: number, items: T[], path: string[], parent: T, nodes: T[]) => boolean, options?: FilterTreeOptions, context?: C): T[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     filterTree: typeof filterTree;
   }
 }

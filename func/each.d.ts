@@ -15,7 +15,7 @@ export declare function each<T, C>(list: T[] | ArrayLike<T>, iterate: (this: C, 
 export declare function each<T, C>(obj: T, iterate: (this: C, item: any, key: string, obj: T) => void, context?: C): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     each: typeof each;
   }
 }

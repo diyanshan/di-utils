@@ -11,7 +11,7 @@ export declare function last<T>(list: T[] | ArrayLike<T>): T;
 export declare function last(obj: any): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     last: typeof last;
   }
 }

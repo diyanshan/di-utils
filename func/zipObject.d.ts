@@ -7,7 +7,7 @@
 export declare function zipObject(props: any[], values: any[]): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     zipObject: typeof zipObject;
   }
 }

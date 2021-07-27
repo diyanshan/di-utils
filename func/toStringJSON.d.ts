@@ -6,7 +6,7 @@ export declare function toStringJSON(str: string | null): any;
 export declare function toStringJSON(str: any): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toStringJSON: typeof toStringJSON;
   }
 }

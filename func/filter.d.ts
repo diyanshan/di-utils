@@ -16,7 +16,7 @@ export declare function filter<T, C>(array: T[], iterate: (this: C, item: T, ind
 export declare function filter<T, C>(obj: T, iterate: (this: C, item: any, key: string, list: T) => boolean, context?: C): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     filter: typeof filter;
   }
 }

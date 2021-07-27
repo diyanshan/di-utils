@@ -6,7 +6,7 @@
 export declare function getDayOfMonth(date: string | Date | number, offset: number): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getDayOfMonth: typeof getDayOfMonth;
   }
 }

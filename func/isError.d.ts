@@ -5,7 +5,7 @@
 export declare function isError(val: any): val is Error;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isError: typeof isError;
   }
 }

@@ -6,7 +6,7 @@
 export declare function chunk<T>(array: T[], size: number): T[][];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     chunk: typeof chunk;
   }
 }

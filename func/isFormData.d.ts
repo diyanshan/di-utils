@@ -5,7 +5,7 @@
 export declare function isFormData(val: any): val is FormData;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isFormData: typeof isFormData;
   }
 }

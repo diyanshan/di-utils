@@ -5,7 +5,7 @@
 export declare function isFinite(val: any): val is number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isFinite: typeof isFinite;
   }
 }

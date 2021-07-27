@@ -9,7 +9,7 @@ export declare function objectEach<T>(obj: T, iterate: (item: any, key: string, 
 export declare function objectEach(obj: any, iterate: (item: any, key: string, obj: any) => void, context ?: any): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     objectEach: typeof objectEach;
   }
 }

@@ -7,7 +7,7 @@
 export declare function delay(callback: (...args: any[]) => any, wait: number, ...params: any[]): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     delay: typeof delay;
   }
 }

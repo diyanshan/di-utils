@@ -15,7 +15,7 @@ export declare function findIndexOf<T, C>(list: T[], iterate: (this: C, item: T,
 export declare function findIndexOf<T, C>(obj: T, iterate: (this: C, item: any, key: string, obj: T) => boolean, context?: C): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     findIndexOf: typeof findIndexOf;
   }
 }

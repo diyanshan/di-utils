@@ -5,7 +5,7 @@
 export declare function unzip(arrays: any[]): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     unzip: typeof unzip;
   }
 }

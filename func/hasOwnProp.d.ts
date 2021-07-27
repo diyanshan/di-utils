@@ -6,7 +6,7 @@
 export declare function hasOwnProp(obj: any, key: string | number): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     hasOwnProp: typeof hasOwnProp;
   }
 }

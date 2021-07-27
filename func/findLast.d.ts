@@ -15,7 +15,7 @@ export declare function findLast<T, C>(array: T[], iterate: (this: C, item: T, i
 export declare function findLast<T, C>(obj: T, iterate: (this: C, item: any, key: string, obj: T) => boolean, context?: C): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     findLast: typeof findLast;
   }
 }

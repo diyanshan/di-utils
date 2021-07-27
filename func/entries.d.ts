@@ -5,7 +5,7 @@
 export declare function entries(obj: any): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     entries: typeof entries;
   }
 }

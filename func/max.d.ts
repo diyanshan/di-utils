@@ -7,7 +7,7 @@
 export declare function max<T, U>(list: T[], iterate: string | number | ((item: T, index: number, list: T[]) => U)): T | U;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     max: typeof max;
   }
 }

@@ -5,7 +5,7 @@
 export declare function eqNull(obj: any): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     eqNull: typeof eqNull;
   }
 }

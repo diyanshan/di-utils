@@ -6,7 +6,7 @@ export declare function kebabCase(str: string): string;
 export declare function kebabCase(str: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     kebabCase: typeof kebabCase;
   }
 }

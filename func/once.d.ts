@@ -7,7 +7,7 @@
 export declare function once<S, C>(callback: (this: S, ...args: any[]) => any, context?: C, ...params: any[]): (this: S | C, ...args: any[]) => any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     once: typeof once;
   }
 }

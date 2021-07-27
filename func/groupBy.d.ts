@@ -15,7 +15,7 @@ export declare function groupBy<T, C>(list: T[], iterate: string | number | ((th
 export declare function groupBy<T, C>(obj: T, iterate: string | number | ((this: C, item: any, key: string, obj: T) => string | number), context?: C): { [key: string]: any[] };
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     groupBy: typeof groupBy;
   }
 }

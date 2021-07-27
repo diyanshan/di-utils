@@ -1,4 +1,4 @@
-import XEUtils from './ctor'
+import DIUtils from './ctor'
 
 // object
 export * from './assign'
@@ -186,4 +186,4 @@ export * from './locat'
 export * from './cookie'
 export * from './browse'
 
-export default XEUtils
+export default DIUtils

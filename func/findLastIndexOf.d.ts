@@ -15,7 +15,7 @@ export declare function findLastIndexOf<T, C>(list: T[], iterate: (this: C, item
 export declare function findLastIndexOf<C>(obj: any, iterate: (this: C, item: any, key: string, obj: any) => boolean, context?: C): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     findLastIndexOf: typeof findLastIndexOf;
   }
 }

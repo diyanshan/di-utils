@@ -5,7 +5,7 @@
 export declare function camelCase(str: string): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     camelCase: typeof camelCase;
   }
 }

@@ -6,7 +6,7 @@ export declare function toArray<T>(list: T[]): T[];
 export declare function toArray(list: any): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toArray: typeof toArray;
   }
 }

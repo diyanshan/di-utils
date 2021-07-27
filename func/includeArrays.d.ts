@@ -6,7 +6,7 @@
 export declare function includeArrays(array1: any[], array2: any[]): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     includeArrays: typeof includeArrays;
   }
 }

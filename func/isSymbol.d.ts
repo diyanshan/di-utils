@@ -5,7 +5,7 @@
 export declare function isSymbol(val: any): val is symbol;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isSymbol: typeof isSymbol;
   }
 }

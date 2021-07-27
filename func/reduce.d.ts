@@ -9,7 +9,7 @@
 export declare function reduce<T, U>(array: T[], iterate?: (previous: U, item: T, index: number, list: T[]) => U, initialValue?: U): U;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     reduce: typeof reduce;
   }
 }

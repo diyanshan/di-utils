@@ -29,7 +29,7 @@ export declare function merge<T, U, V, W>(target: T, source1: U, source2: V, sou
 export declare function merge(target: any, ...sources: any[]): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
    merge: typeof merge;
   }
 }

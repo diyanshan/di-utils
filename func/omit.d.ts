@@ -6,7 +6,7 @@
 export declare function omit(obj: any, array: string[]): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     omit: typeof omit;
   }
 }

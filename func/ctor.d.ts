@@ -12,12 +12,12 @@ export const VERSION: string;
 export function setup(options: SetupDefaults): SetupDefaults;
 
 /**
- * 将您自己的实用函数扩展到 XEUtils
+ * 将您自己的实用函数扩展到 DIUtils
  * @param methods 函数集
  */
 export function mixin(...methods: {[key: string]: any}[]): void;
 
-export interface XEUtilsMethods {
+export interface DIUtilsMethods {
   VERSION: typeof VERSION;
   setup: typeof setup;
   mixin: typeof mixin;
@@ -28,6 +28,6 @@ export interface XEUtilsMethods {
 /**
  * JavaScript 函数库、工具类
  */
-declare var XEUtils: XEUtilsMethods
+declare var DIUtils: DIUtilsMethods
 
-export default XEUtils
+export default DIUtils

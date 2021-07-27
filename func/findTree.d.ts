@@ -21,7 +21,7 @@ export interface FindTreeOptions {
 export declare function findTree<T, C>(list: T[], iterate: (this: C, item: T, index: number, items: T[], path: string[], parent: T, nodes: T[]) => boolean, options?: FindTreeOptions, context?: C): FindTerrResult<T>;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     findTree: typeof findTree;
   }
 }

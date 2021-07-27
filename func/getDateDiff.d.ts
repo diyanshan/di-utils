@@ -53,7 +53,7 @@ export declare function getDateDiff(startDate: string | Date | number, endDate: 
 export declare function getDateDiff(startDate: string | Date | number, endDate: string | Date | number, rules?: any[][]): DateDiffResult;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getDateDiff: typeof getDateDiff;
   }
 }

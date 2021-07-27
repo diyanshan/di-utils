@@ -7,7 +7,7 @@ import orderBy from './orderBy'
 export const sortBy: typeof orderBy
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     sortBy: typeof sortBy;
   }
 }

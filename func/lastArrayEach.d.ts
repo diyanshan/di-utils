@@ -10,7 +10,7 @@ export declare function lastArrayEach<C>(list: any[], iterate: (this: C, item: a
 export declare function lastArrayEach<C>(list: any, iterate: (this: C, item: any, index: number, list: any) => void, context?: C): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     lastArrayEach: typeof lastArrayEach;
   }
 }

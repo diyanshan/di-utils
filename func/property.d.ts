@@ -5,7 +5,7 @@
 export declare function property(path: string | null): Function;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     property: typeof property;
   }
 }

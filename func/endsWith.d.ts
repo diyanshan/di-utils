@@ -14,7 +14,7 @@ export declare function endsWith(str: string, val: string): string;
 export declare function endsWith(str: string, val: string, startIndex: number): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     endsWith: typeof endsWith;
   }
 }

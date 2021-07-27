@@ -6,7 +6,7 @@ export declare function isLeapYear(date: Date | number | string): boolean;
 export declare function isLeapYear(date: any): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     /**
      * 判断是否闰年
      * @param date 日期

@@ -5,7 +5,7 @@
 export declare function isInteger(val: any): val is number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isInteger: typeof isInteger;
   }
 }

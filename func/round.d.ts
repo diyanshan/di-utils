@@ -7,7 +7,7 @@ export declare function round(num: number, digits?: number): number;
 export declare function round(num: any, digits?: number): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     round: typeof round;
   }
 }

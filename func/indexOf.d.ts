@@ -6,7 +6,7 @@
 export declare function indexOf(obj: any, val: any): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     indexOf: typeof indexOf;
   }
 }

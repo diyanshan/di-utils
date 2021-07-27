@@ -5,7 +5,7 @@
 export declare function isNull(val: any): val is null;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isNull: typeof isNull;
   }
 }

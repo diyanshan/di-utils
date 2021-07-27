@@ -63,7 +63,7 @@ export interface XEBrowse {
 export declare function browse(): XEBrowse;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     browse: typeof browse;
   }
 }

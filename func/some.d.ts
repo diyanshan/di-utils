@@ -7,7 +7,7 @@
 export declare function some<T>(list: T[], iterate: (item: T, index: number, list: T[]) => boolean, context?: any): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     some: typeof some;
   }
 }

@@ -14,7 +14,7 @@ export declare function eachTree<C>(list: any[], iterate: (this: C, item: any, i
 export declare function eachTree<C>(list: any, iterate: (this: C, item: any, index: number, items: any, path: string[], parent: any, nodes: any) => void, options?: EachTreeOptions, context?: C): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     eachTree: typeof eachTree;
   }
 }

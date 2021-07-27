@@ -9,7 +9,7 @@ export declare function objectMap<T, U>(obj: T, iterate: (item: any, key: string
 export declare function objectMap<U>(obj: any, iterate: (item: any, key: string, obj: any) => U, context ?: any): U;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     objectMap: typeof objectMap;
   }
 }

@@ -14,7 +14,7 @@ export declare function range(start: number, stop: number): number[];
 export declare function range(start: number, stop: number, step: number): number[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     range: typeof range;
   }
 }

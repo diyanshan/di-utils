@@ -14,7 +14,7 @@ export declare function getWhatDay(date: string | Date | number, offset: number)
 export declare function getWhatDay(date: string | Date | number, offset: number, mode: 'first' | 'last'): Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getWhatDay: typeof getWhatDay;
   }
 }

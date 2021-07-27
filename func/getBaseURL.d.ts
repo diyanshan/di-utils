@@ -4,7 +4,7 @@
 export declare function getBaseURL(): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getBaseURL: typeof getBaseURL;
   }
 }

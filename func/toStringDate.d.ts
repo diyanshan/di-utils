@@ -14,7 +14,7 @@ export declare function toStringDate(str: string | Date | number | null, format:
 export declare function toStringDate(str: any, format: string | null): Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toStringDate: typeof toStringDate;
   }
 }

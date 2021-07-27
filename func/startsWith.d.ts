@@ -7,7 +7,7 @@
 export declare function startsWith(str: number | string | null, val: string, startIndex?: number): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     startsWith: typeof startsWith;
   }
 }

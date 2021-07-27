@@ -8,7 +8,7 @@ export declare function get<T extends object, K extends keyof T>(obj: T, propert
 export declare function get(obj: any, property: string | string[], defaultValue?: any): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     get: typeof get;
   }
 }

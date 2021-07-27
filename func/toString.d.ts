@@ -5,7 +5,7 @@
 export declare function toString(obj: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toString: typeof toString;
   }
 }

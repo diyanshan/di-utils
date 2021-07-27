@@ -12,7 +12,7 @@ export declare function clone<T>(obj: T): T;
 export declare function clone<T>(obj: T, deep: boolean): T;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     clone: typeof clone;
   }
 }

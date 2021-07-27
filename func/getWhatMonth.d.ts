@@ -14,7 +14,7 @@ export declare function getWhatMonth(date: string | Date | number, offset: numbe
 export declare function getWhatMonth(date: string | Date | number, offset: number, day: number | 'first' | 'last'): Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getWhatMonth: typeof getWhatMonth;
   }
 }

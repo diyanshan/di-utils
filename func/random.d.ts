@@ -6,7 +6,7 @@
 export declare function random(min: number, max: number): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     random: typeof random;
   }
 }

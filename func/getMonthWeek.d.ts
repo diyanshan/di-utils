@@ -5,7 +5,7 @@
 export declare function getMonthWeek(date: string | Date | number): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getMonthWeek: typeof getMonthWeek;
   }
 }

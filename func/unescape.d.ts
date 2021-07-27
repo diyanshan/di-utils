@@ -6,7 +6,7 @@ export declare function unescape(str: string): string;
 export declare function unescape(str: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     unescape: typeof unescape;
   }
 }

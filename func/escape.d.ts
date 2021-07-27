@@ -5,7 +5,7 @@
 export declare function escape(str: string): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     escape: typeof escape;
   }
 }

@@ -5,7 +5,7 @@
 export declare function toJSONString(obj: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toJSONString: typeof toJSONString;
   }
 }

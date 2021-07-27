@@ -5,7 +5,7 @@
 export declare function isWindow(val: any): val is Window;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isWindow: typeof isWindow;
   }
 }

@@ -5,7 +5,7 @@
 export declare function serialize(query: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     serialize: typeof serialize;
   }
 }

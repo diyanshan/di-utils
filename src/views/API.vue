@@ -3,7 +3,7 @@
     <div class="aside">
       <div class="header">
         <h1 class="title">
-          <a href="https://github.com/xuliangzhan/xe-utils">xe-utils</a>
+          <!-- <a href="https://github.com/xuliangzhan/xe-utils">xe-utils</a> -->
         </h1>
         <div class="search-wrapper">
           <input class="search-input" v-model="filterName" type="search" placeholder="API 搜索">
@@ -69,8 +69,8 @@ export default {
               codes: [
                 `
                 isNaN(undefined) // true
-                XEUtils.isNaN(undefined) // false
-                XEUtils.isNaN(NaN) // true
+                DIUtils.isNaN(undefined) // false
+                DIUtils.isNaN(NaN) // true
                 `
               ]
             },
@@ -82,9 +82,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isFinite(NaN) // false
-                XEUtils.isFinite(0) // true
-                XEUtils.isFinite(2e64) // true
+                DIUtils.isFinite(NaN) // false
+                DIUtils.isFinite(0) // true
+                DIUtils.isFinite(2e64) // true
                 `
               ]
             },
@@ -96,8 +96,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isUndefined(0) // false
-                XEUtils.isUndefined() // true
+                DIUtils.isUndefined(0) // false
+                DIUtils.isUndefined() // true
                 `
               ]
             },
@@ -109,9 +109,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isArray(null) // false
-                XEUtils.isArray({}) // false
-                XEUtils.isArray([1,2,3]) // true
+                DIUtils.isArray(null) // false
+                DIUtils.isArray({}) // false
+                DIUtils.isArray([1,2,3]) // true
                 `
               ]
             },
@@ -123,10 +123,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isFloat(null) // false
-                XEUtils.isFloat(0) // false
-                XEUtils.isFloat(3) // false
-                XEUtils.isFloat(3.3) // true
+                DIUtils.isFloat(null) // false
+                DIUtils.isFloat(0) // false
+                DIUtils.isFloat(3) // false
+                DIUtils.isFloat(3.3) // true
                 `
               ]
             },
@@ -138,10 +138,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isInteger(null) // false
-                XEUtils.isInteger(3.3) // false
-                XEUtils.isInteger(3) // true
-                XEUtils.isInteger(0) // true
+                DIUtils.isInteger(null) // false
+                DIUtils.isInteger(3.3) // false
+                DIUtils.isInteger(3) // true
+                DIUtils.isInteger(0) // true
                 `
               ]
             },
@@ -153,8 +153,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isFunction({}) // false
-                XEUtils.isFunction(function(){}) // true
+                DIUtils.isFunction({}) // false
+                DIUtils.isFunction(function(){}) // true
                 `
               ]
             },
@@ -166,8 +166,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isBoolean('false') // false
-                XEUtils.isBoolean(true) // true
+                DIUtils.isBoolean('false') // false
+                DIUtils.isBoolean(true) // true
                 `
               ]
             },
@@ -179,10 +179,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isString(1) // false
-                XEUtils.isString(true) // false
-                XEUtils.isString('') // true
-                XEUtils.isString('abc') // true
+                DIUtils.isString(1) // false
+                DIUtils.isString(true) // false
+                DIUtils.isString('') // true
+                DIUtils.isString('abc') // true
                 `
               ]
             },
@@ -194,9 +194,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isNumber(null) // false
-                XEUtils.isNumber('1') // false
-                XEUtils.isNumber(1) // true
+                DIUtils.isNumber(null) // false
+                DIUtils.isNumber('1') // false
+                DIUtils.isNumber(1) // true
                 `
               ]
             },
@@ -208,10 +208,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isRegExp(null) // false
-                XEUtils.isRegExp('a') // false
-                XEUtils.isRegExp(new RegExp('a')) // true
-                XEUtils.isRegExp(/\\d/) // true
+                DIUtils.isRegExp(null) // false
+                DIUtils.isRegExp('a') // false
+                DIUtils.isRegExp(new RegExp('a')) // true
+                DIUtils.isRegExp(/\\d/) // true
                 `
               ]
             },
@@ -223,10 +223,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isObject(null) // true
-                XEUtils.isObject([]) // true
-                XEUtils.isObject({}) // true
-                XEUtils.isObject(123) // false
+                DIUtils.isObject(null) // true
+                DIUtils.isObject([]) // true
+                DIUtils.isObject({}) // true
+                DIUtils.isObject(123) // false
                 `
               ]
             },
@@ -238,10 +238,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isPlainObject(null) // false
-                XEUtils.isPlainObject([]) // false
-                XEUtils.isPlainObject(123) // false
-                XEUtils.isPlainObject({}) // true
+                DIUtils.isPlainObject(null) // false
+                DIUtils.isPlainObject([]) // false
+                DIUtils.isPlainObject(123) // false
+                DIUtils.isPlainObject({}) // true
                 `
               ]
             },
@@ -253,10 +253,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isDate('2017-12-20') // false
-                XEUtils.isDate(1514096716800) // false
-                XEUtils.isDate(new Date('abc')) // Invalid Date => true
-                XEUtils.isDate(new Date()) // true
+                DIUtils.isDate('2017-12-20') // false
+                DIUtils.isDate(1514096716800) // false
+                DIUtils.isDate(new Date('abc')) // Invalid Date => true
+                DIUtils.isDate(new Date()) // true
                 `
               ]
             },
@@ -268,10 +268,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isValidDate('2017-12-20') // false
-                XEUtils.isValidDate(1514096716800) // false
-                XEUtils.isValidDate(new Date('abc')) // Invalid Date => false
-                XEUtils.isValidDate(new Date()) // true
+                DIUtils.isValidDate('2017-12-20') // false
+                DIUtils.isValidDate(1514096716800) // false
+                DIUtils.isValidDate(new Date('abc')) // Invalid Date => false
+                DIUtils.isValidDate(new Date()) // true
                 `
               ]
             },
@@ -283,10 +283,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isError(null) // false
-                XEUtils.isError({}) // false
-                XEUtils.isError(new TypeError('error')) // true
-                XEUtils.isError(new Error('error')) // true
+                DIUtils.isError(null) // false
+                DIUtils.isError({}) // false
+                DIUtils.isError(new TypeError('error')) // true
+                DIUtils.isError(new Error('error')) // true
                 `
               ]
             },
@@ -298,10 +298,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isTypeError(null) // false
-                XEUtils.isTypeError({}) // false
-                XEUtils.isTypeError(new Error('error')) // false
-                XEUtils.isTypeError(new TypeError('error')) // true
+                DIUtils.isTypeError(null) // false
+                DIUtils.isTypeError({}) // false
+                DIUtils.isTypeError(new Error('error')) // false
+                DIUtils.isTypeError(new TypeError('error')) // true
                 `
               ]
             },
@@ -313,11 +313,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isEmpty([11, 22]) // false
-                XEUtils.isEmpty({a:null}) // false
-                XEUtils.isEmpty(null) // true
-                XEUtils.isEmpty({}) // true
-                XEUtils.isEmpty([]) // true
+                DIUtils.isEmpty([11, 22]) // false
+                DIUtils.isEmpty({a:null}) // false
+                DIUtils.isEmpty(null) // true
+                DIUtils.isEmpty({}) // true
+                DIUtils.isEmpty([]) // true
                 `
               ]
             },
@@ -329,9 +329,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isNull(0) // false
-                XEUtils.isNull('') // false
-                XEUtils.isNull(null) // true
+                DIUtils.isNull(0) // false
+                DIUtils.isNull('') // false
+                DIUtils.isNull(null) // true
                 `
               ]
             },
@@ -343,8 +343,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isSymbol('a') // false
-                XEUtils.isSymbol(Symbol('a')) // true
+                DIUtils.isSymbol('a') // false
+                DIUtils.isSymbol(Symbol('a')) // true
                 `
               ]
             },
@@ -356,8 +356,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isArguments([]) // false
-                XEUtils.isArguments(arguments) // true
+                DIUtils.isArguments([]) // false
+                DIUtils.isArguments(arguments) // true
                 `
               ]
             },
@@ -369,8 +369,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isElement({}) // false
-                XEUtils.isElement(document.createElement('div')) // true
+                DIUtils.isElement({}) // false
+                DIUtils.isElement(document.createElement('div')) // true
                 `
               ]
             },
@@ -382,9 +382,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isDocument({}) // false
-                XEUtils.isDocument(document.createElement('div')) // false
-                XEUtils.isDocument(document) // true
+                DIUtils.isDocument({}) // false
+                DIUtils.isDocument(document.createElement('div')) // false
+                DIUtils.isDocument(document) // true
                 `
               ]
             },
@@ -396,9 +396,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isWindow({}) // false
-                XEUtils.isWindow(document) // false
-                XEUtils.isWindow(window) // true
+                DIUtils.isWindow({}) // false
+                DIUtils.isWindow(document) // false
+                DIUtils.isWindow(window) // true
                 `
               ]
             },
@@ -410,8 +410,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isFormData({}) // false
-                XEUtils.isFormData(new FormData()) // true
+                DIUtils.isFormData({}) // false
+                DIUtils.isFormData(new FormData()) // true
                 `
               ]
             },
@@ -423,8 +423,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isMap({}) // false
-                XEUtils.isMap(new Map()) // true
+                DIUtils.isMap({}) // false
+                DIUtils.isMap(new Map()) // true
                 `
               ]
             },
@@ -436,8 +436,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isWeakMap({}) // false
-                XEUtils.isWeakMap(new WeakMap()) // true
+                DIUtils.isWeakMap({}) // false
+                DIUtils.isWeakMap(new WeakMap()) // true
                 `
               ]
             },
@@ -449,8 +449,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isSet({}) // false
-                XEUtils.isSet(new Set()) // true
+                DIUtils.isSet({}) // false
+                DIUtils.isSet(new Set()) // true
                 `
               ]
             },
@@ -462,8 +462,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isWeakSet({}) // false
-                XEUtils.isWeakSet(new WeakSet()) // true
+                DIUtils.isWeakSet({}) // false
+                DIUtils.isWeakSet(new WeakSet()) // true
                 `
               ]
             },
@@ -475,10 +475,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isLeapYear(1606752000000)  // true
-                XEUtils.isLeapYear('2018-12-01') // false
-                XEUtils.isLeapYear('2020-12-01') // true
-                XEUtils.isLeapYear(new Date('2020/12/01')) // true
+                DIUtils.isLeapYear(1606752000000)  // true
+                DIUtils.isLeapYear('2018-12-01') // false
+                DIUtils.isLeapYear('2020-12-01') // true
+                DIUtils.isLeapYear(new Date('2020/12/01')) // true
                 `
               ]
             },
@@ -490,8 +490,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isMatch({ aa: 11, bb: 22 }, { bb: 22 })  // true
-                XEUtils.isMatch({ aa: 11, bb: 22 }, { bb: 33 })  // false
+                DIUtils.isMatch({ aa: 11, bb: 22 }, { bb: 22 })  // true
+                DIUtils.isMatch({ aa: 11, bb: 22 }, { bb: 33 })  // false
                 `
               ]
             },
@@ -503,11 +503,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isEqual({}, []) // false
-                XEUtils.isEqual({0: 1}, [1]) // false
-                XEUtils.isEqual({name: 'test1'}, {name: 'test1'}) // true
-                XEUtils.isEqual({name: 'test1', list: [11, /\\d/]}, {name: 'test1', list: [11,  /\\d/]}) // true
-                XEUtils.isEqual({name: 'test1', list: [11, 33, {a: /\\D/}]}, {name: 'test1', list: [11, 33, {a: /\\d/}]}) // false
+                DIUtils.isEqual({}, []) // false
+                DIUtils.isEqual({0: 1}, [1]) // false
+                DIUtils.isEqual({name: 'test1'}, {name: 'test1'}) // true
+                DIUtils.isEqual({name: 'test1', list: [11, /\\d/]}, {name: 'test1', list: [11,  /\\d/]}) // true
+                DIUtils.isEqual({name: 'test1', list: [11, 33, {a: /\\D/}]}, {name: 'test1', list: [11, 33, {a: /\\d/}]}) // false
                 `
               ]
             },
@@ -519,10 +519,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isEqualWith({0: 1}, [1]) // false
-                XEUtils.isEqualWith({0: 1}, [1], (v1, v2) => true) // true
-                XEUtils.isEqualWith([1], [1]) // true
-                XEUtils.isEqualWith([1], [1], (v1, v2) => false) // false
+                DIUtils.isEqualWith({0: 1}, [1]) // false
+                DIUtils.isEqualWith({0: 1}, [1], (v1, v2) => true) // true
+                DIUtils.isEqualWith([1], [1]) // true
+                DIUtils.isEqualWith([1], [1], (v1, v2) => false) // false
                 `
               ]
             },
@@ -534,11 +534,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.isDateSame('2018-12-01', '2018-12-01') // true
-                XEUtils.isDateSame(new Date(), '2018-12-01', 'yyyy') // 判断是否同一年 true
-                XEUtils.isDateSame(new Date(), XEUtils.toStringDate('12/30/2018', 'MM/dd/yyyy'), 'MM') // 判断是否同一月 true
-                XEUtils.isDateSame(new Date(), new Date(), 'dd') // 判断是否同一日 true
-                XEUtils.isDateSame(new Date(), new Date(), 'yyyyMMdd') // 判断是否同年同月同日 true
+                DIUtils.isDateSame('2018-12-01', '2018-12-01') // true
+                DIUtils.isDateSame(new Date(), '2018-12-01', 'yyyy') // 判断是否同一年 true
+                DIUtils.isDateSame(new Date(), DIUtils.toStringDate('12/30/2018', 'MM/dd/yyyy'), 'MM') // 判断是否同一月 true
+                DIUtils.isDateSame(new Date(), new Date(), 'dd') // 判断是否同一日 true
+                DIUtils.isDateSame(new Date(), new Date(), 'yyyyMMdd') // 判断是否同年同月同日 true
                 `
               ]
             },
@@ -550,15 +550,15 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getType() // 'undefined'
-                XEUtils.getType(null) // 'null'
-                XEUtils.getType('') // 'string'
-                XEUtils.getType(/\\d/) // 'regexp'
-                XEUtils.getType(1) // 'number'
-                XEUtils.getType([]) // 'array'
-                XEUtils.getType({}) // 'object'
-                XEUtils.getType(new Error()) // 'error'
-                XEUtils.getType(function(){}) // 'function'
+                DIUtils.getType() // 'undefined'
+                DIUtils.getType(null) // 'null'
+                DIUtils.getType('') // 'string'
+                DIUtils.getType(/\\d/) // 'regexp'
+                DIUtils.getType(1) // 'number'
+                DIUtils.getType([]) // 'array'
+                DIUtils.getType({}) // 'object'
+                DIUtils.getType(new Error()) // 'error'
+                DIUtils.getType(function(){}) // 'function'
                 `
               ]
             },
@@ -570,9 +570,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.uniqueId() // 1
-                XEUtils.uniqueId() // 2
-                XEUtils.uniqueId('prefix_') // 'prefix_3'
+                DIUtils.uniqueId() // 1
+                DIUtils.uniqueId() // 2
+                DIUtils.uniqueId('prefix_') // 'prefix_3'
                 `
               ]
             },
@@ -584,9 +584,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getSize('123') // 3
-                XEUtils.getSize([1, 3]) // 2
-                XEUtils.getSize({a: 2, b: 5}) // 2
+                DIUtils.getSize('123') // 3
+                DIUtils.getSize([1, 3]) // 2
+                DIUtils.getSize({a: 2, b: 5}) // 2
                 `
               ]
             },
@@ -598,8 +598,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toStringJSON('{"a":1}') // {a: 1}
-                XEUtils.toStringJSON('[11,22]') // [11, 22]
+                DIUtils.toStringJSON('{"a":1}') // {a: 1}
+                DIUtils.toStringJSON('[11,22]') // [11, 22]
                 `
               ]
             },
@@ -611,8 +611,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toJSONString({a: 1}) // '{"a":1}'
-                XEUtils.toJSONString([11, 22]) // '[11,22]'
+                DIUtils.toJSONString({a: 1}) // '{"a":1}'
+                DIUtils.toJSONString([11, 22]) // '[11,22]'
                 `
               ]
             },
@@ -624,7 +624,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.keys({a: 11}) // ['a']
+                DIUtils.keys({a: 11}) // ['a']
                 `
               ]
             },
@@ -636,7 +636,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.values({a: 11}) // [11]
+                DIUtils.values({a: 11}) // [11]
                 `
               ]
             },
@@ -648,8 +648,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.entries({a: 11}) // [['a', 11]]
-                XEUtils.entries([11, 22]) // [['0', 11], ['1', 22]]
+                DIUtils.entries({a: 11}) // [['a', 11]]
+                DIUtils.entries([11, 22]) // [['0', 11], ['1', 22]]
                 `
               ]
             },
@@ -661,8 +661,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.first({a: 11, b : 22}) // 11
-                XEUtils.first([11, 22]) // 11
+                DIUtils.first({a: 11, b : 22}) // 11
+                DIUtils.first([11, 22]) // 11
                 `
               ]
             },
@@ -674,8 +674,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.last({a: 11, b: 22}) // 22
-                XEUtils.last([11, 22]) // 22
+                DIUtils.last({a: 11, b: 22}) // 22
+                DIUtils.last([11, 22]) // 22
                 `
               ]
             },
@@ -687,7 +687,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.each([11, 22, 33], (item, key) => {
+                DIUtils.each([11, 22, 33], (item, key) => {
                   // 通用迭代器，支持遍历任意类型
                 })
                 `
@@ -701,7 +701,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.lastEach([11, 22, 33], (item, key) => {
+                DIUtils.lastEach([11, 22, 33], (item, key) => {
                   // 通用迭代器，支持遍历任意类型
                 })
                 `
@@ -715,10 +715,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.range(0) // []
-                XEUtils.range(10) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                XEUtils.range(-5, 5) // [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
-                XEUtils.range(0, 10, 2) // [0, 2, 4, 6, 8]
+                DIUtils.range(0) // []
+                DIUtils.range(10) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                DIUtils.range(-5, 5) // [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+                DIUtils.range(0, 10, 2) // [0, 2, 4, 6, 8]
                 `
               ]
             }
@@ -737,12 +737,12 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, 'a.b') // true
-                XEUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, 'a.e') // false
-                XEUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, 'a.d[0]') // true
-                XEUtils.has({a: {b: 11, c: 22, d: [33, {f: 66}]}}, 'a.d[1].f') // true
-                XEUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, ['a', 'd[1]']) // true
-                XEUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, ['a', 'd[3]']) // false
+                DIUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, 'a.b') // true
+                DIUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, 'a.e') // false
+                DIUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, 'a.d[0]') // true
+                DIUtils.has({a: {b: 11, c: 22, d: [33, {f: 66}]}}, 'a.d[1].f') // true
+                DIUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, ['a', 'd[1]']) // true
+                DIUtils.has({a: {b: 11, c: 22, d: [33, 44]}}, ['a', 'd[3]']) // false
                 `
               ]
             },
@@ -754,11 +754,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, 'a.b') // 11
-                XEUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, 'a.e', 'default') // 'default'
-                XEUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, 'a.d[0]') // 33
-                XEUtils.get({a: {b: 11, c: 22, d: [33, {f: 66}]}}, 'a.d[1].f') // 66
-                XEUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, ['a', 'c']) // 22
+                DIUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, 'a.b') // 11
+                DIUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, 'a.e', 'default') // 'default'
+                DIUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, 'a.d[0]') // 33
+                DIUtils.get({a: {b: 11, c: 22, d: [33, {f: 66}]}}, 'a.d[1].f') // 66
+                DIUtils.get({a: {b: 11, c: 22, d: [33, 44]}}, ['a', 'c']) // 22
                 `
               ]
             },
@@ -770,10 +770,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.set({}, 'a.d[0]', 33) // {a: {d: [33]}}
-                XEUtils.set({a: {}}, 'a.d[0].f.h', 44) // {a: {d: [{f: {h: 44}}]}}
-                XEUtils.set({}, ['a', 'c'], 22) // {a: {c: 22}}
-                XEUtils.set({}, ['a', 'd[0]', 'f', 'h'], 44) // {a: {d: [{f: {h: 44}}]}}
+                DIUtils.set({}, 'a.d[0]', 33) // {a: {d: [33]}}
+                DIUtils.set({a: {}}, 'a.d[0].f.h', 44) // {a: {d: [{f: {h: 44}}]}}
+                DIUtils.set({}, ['a', 'c'], 22) // {a: {c: 22}}
+                DIUtils.set({}, ['a', 'd[0]', 'f', 'h'], 44) // {a: {d: [{f: {h: 44}}]}}
                 `
               ]
             },
@@ -786,13 +786,13 @@ export default {
               codes: [
                 `
                 let a = [11, 22, 33, 33]
-                XEUtils.clear(a) // []
-                XEUtils.clear(a, undefined) // [undefined, undefined, undefined, undefined]
-                XEUtils.clear(a, null) // [null, null, null, null]
+                DIUtils.clear(a) // []
+                DIUtils.clear(a, undefined) // [undefined, undefined, undefined, undefined]
+                DIUtils.clear(a, null) // [null, null, null, null]
                 let b = {b1: 11, b2: 22}
-                XEUtils.clear(b) // {}
-                XEUtils.clear(b, undefined) // {b1: undefined, b2: undefined}
-                XEUtils.clear(b, null) // {b1: null, b2: null}
+                DIUtils.clear(b) // {}
+                DIUtils.clear(b, undefined) // {b1: undefined, b2: undefined}
+                DIUtils.clear(b, null) // {b1: null, b2: null}
                 `
               ]
             },
@@ -805,11 +805,11 @@ export default {
               codes: [
                 `
                 const obj1 = {a: 0, b: {b1: 11}}
-                const obj2 = XEUtils.assign(obj1, {a: 11}, {c: 33})
+                const obj2 = DIUtils.assign(obj1, {a: 11}, {c: 33})
                 // {a: 11, b: {b1: 11}, c: 33}
 
                 const obj3 = {a: 0, b: {b1: 11}}
-                const obj4 = XEUtils.assign(obj1, {a: 11, b: {b2: 22}})
+                const obj4 = DIUtils.assign(obj1, {a: 11, b: {b2: 22}})
                 // {a: 11, b: {b2: 22}}
                 `
               ]
@@ -823,11 +823,11 @@ export default {
               codes: [
                 `
                 const obj1 = [{a: 11}, {b: 22}]
-                const obj2 = XEUtils.merge(obj1, [{c: 33}, {d: 44}])
+                const obj2 = DIUtils.merge(obj1, [{c: 33}, {d: 44}])
                 // [{a: 11, c: 33}, {b: 22, d: 44}]
 
                 const obj3 = {a: 0, b: {b1: 11}, c: {c1: {d: 44}}}
-                const obj4 = XEUtils.merge(obj1, {a: 11, b: {b2: 22}, c: {f1: 55}})
+                const obj4 = DIUtils.merge(obj1, {a: 11, b: {b2: 22}, c: {f1: 55}})
                 // {a: 11, b: {b1: 11, b2: 22}, c: {c1: {d: 44}, f1: 55}}
                 `
               ]
@@ -841,11 +841,11 @@ export default {
               codes: [
                 `
                 let v1 = {a: 11, b: {b1: 22}}
-                let v2 = XEUtils.clone(v1)
+                let v2 = DIUtils.clone(v1)
                 if (v1.b === v2.b) {
                   // true
                 }
-                let v3 = XEUtils.clone(v1, true)
+                let v3 = DIUtils.clone(v1, true)
                 if (v1.b === v3.b) {
                   // false
                 }
@@ -860,9 +860,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.destructuring({a: null}, {a: 11, b: 22, c: 33}) // {a: 11}
-                XEUtils.destructuring({a: 11, d: 44}, {a: 11, b: 22, c: 33}) // {a: 11, d: 44}
-                XEUtils.destructuring({a: 11, c: 33, d: 44}, {a: 11, b: 22, c: null, e: 55, f: 66}) // {a: 11, c: null, d: 44}
+                DIUtils.destructuring({a: null}, {a: 11, b: 22, c: 33}) // {a: 11}
+                DIUtils.destructuring({a: 11, d: 44}, {a: 11, b: 22, c: 33}) // {a: 11, d: 44}
+                DIUtils.destructuring({a: 11, c: 33, d: 44}, {a: 11, b: 22, c: null, e: 55, f: 66}) // {a: 11, c: null, d: 44}
                 `
               ]
             },
@@ -874,7 +874,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.objectEach([11, 22, 33], (item, key) => {
+                DIUtils.objectEach([11, 22, 33], (item, key) => {
                   // 对象迭代器，只能用于遍历对象，性能高于 each
                 })
                 `
@@ -888,7 +888,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.lastObjectEach([11, 22, 33], (item, key) => {
+                DIUtils.lastObjectEach([11, 22, 33], (item, key) => {
                   // 对象迭代器，只能用于遍历对象，性能高于 lastEach
                 })
                 `
@@ -902,7 +902,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.objectMap({a: {type: 'a'}, b: {type: 'b'}}, item => item.type) // {a: "a", b: "b"}
+                DIUtils.objectMap({a: {type: 'a'}, b: {type: 'b'}}, item => item.type) // {a: "a", b: "b"}
                 `
               ]
             },
@@ -914,9 +914,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.pick({name: 'test11', age: 25, height: 176}, 'name', 'height') // {name: 'test11', height: 176}
-                XEUtils.pick({name: 'test11', age: 25, height: 176}, ['name', 'age']) // {name: 'test11', age: 25}
-                XEUtils.pick({name: 'test11', age: 25, height: 176}, val => XEUtils.isNumber(val)) // {age: 25, height: 176}
+                DIUtils.pick({name: 'test11', age: 25, height: 176}, 'name', 'height') // {name: 'test11', height: 176}
+                DIUtils.pick({name: 'test11', age: 25, height: 176}, ['name', 'age']) // {name: 'test11', age: 25}
+                DIUtils.pick({name: 'test11', age: 25, height: 176}, val => DIUtils.isNumber(val)) // {age: 25, height: 176}
                 `
               ]
             },
@@ -928,9 +928,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.omit({name: 'test11', age: 25, height: 176}, 'name', 'height') // {age: 25}
-                XEUtils.omit({name: 'test11', age: 25, height: 176}, ['name', 'age']) // {height: 176}
-                XEUtils.omit({name: 'test11', age: 25, height: 176}, val => XEUtils.isNumber(val)) // {name: 'test11'}
+                DIUtils.omit({name: 'test11', age: 25, height: 176}, 'name', 'height') // {age: 25}
+                DIUtils.omit({name: 'test11', age: 25, height: 176}, ['name', 'age']) // {height: 176}
+                DIUtils.omit({name: 'test11', age: 25, height: 176}, val => DIUtils.isNumber(val)) // {name: 'test11'}
                 `
               ]
             }
@@ -949,7 +949,7 @@ export default {
               params: [],
               codes: [
                 `
-                [11, 22, 33].map(XEUtils.noop)
+                [11, 22, 33].map(DIUtils.noop)
                 // [undefined, undefined, undefined]
                 `
               ]
@@ -962,7 +962,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.delay(function (name) {
+                DIUtils.delay(function (name) {
                   console.log(name)
                 }, 300, 'test11')
                 // 'test11'
@@ -977,7 +977,7 @@ export default {
               params: [],
               codes: [
                 `
-                let rest = XEUtils.bind(function (val) {
+                let rest = DIUtils.bind(function (val) {
                   return this.name + ' = ' + val
                 }, {name: 'test'})
                 rest(222) // 'test = 222'
@@ -993,7 +993,7 @@ export default {
               params: [],
               codes: [
                 `
-                let rest = XEUtils.once(function (val) {
+                let rest = DIUtils.once(function (val) {
                   return this.name + ' = ' + val
                 }, {name: 'test'})
                 rest(222) // 'test = 222'
@@ -1016,7 +1016,7 @@ export default {
                 }
 
                 // 如果你想确保所有异步请求完成之后才执行这个函数
-                let finish = XEUtils.after(3, function (rests) {
+                let finish = DIUtils.after(3, function (rests) {
                   console.log('All finish')
                 })
                 getJSON('/api/list1', finish)
@@ -1033,7 +1033,7 @@ export default {
               params: [],
               codes: [
                 `
-                document.querySelector('.btn').addEventListener('click', XEUtils.before(4, function (rests) {
+                document.querySelector('.btn').addEventListener('click', DIUtils.before(4, function (rests) {
                   console.log('只能点击三次')
                 }))
                 `
@@ -1052,19 +1052,19 @@ export default {
                 }
 
                 // 在计时结束之前执行
-                document.body.addEventListener('scroll', XEUtils.throttle(scrollEvent, 100))
+                document.body.addEventListener('scroll', DIUtils.throttle(scrollEvent, 100))
                 // 在计时结束之前执行
-                document.body.addEventListener('scroll', XEUtils.throttle(scrollEvent, 100, {
+                document.body.addEventListener('scroll', DIUtils.throttle(scrollEvent, 100, {
                   leading: true,
                   trailing: false
                 }))
                 // 在计时结束之后执行
-                document.body.addEventListener('scroll', XEUtils.throttle(scrollEvent, 100, {
+                document.body.addEventListener('scroll', DIUtils.throttle(scrollEvent, 100, {
                   leading: false,
                   trailing: true
                 }))
 
-                let func = XEUtils.throttle(function (msg) {
+                let func = DIUtils.throttle(function (msg) {
                   console.log(msg)
                 }, 300)
                 func('执行一次')
@@ -1086,21 +1086,21 @@ export default {
                 }
 
                 // 在计时结束之后执行
-                document.addEventListener('resize', XEUtils.debounce(resizeEvent, 100))
+                document.addEventListener('resize', DIUtils.debounce(resizeEvent, 100))
                 // 在计时结束之前执行
-                document.addEventListener('resize', XEUtils.debounce(resizeEvent, 100, true))
+                document.addEventListener('resize', DIUtils.debounce(resizeEvent, 100, true))
                 // 在计时结束之前执行
-                document.addEventListener('resize', XEUtils.debounce(resizeEvent, 100, {
+                document.addEventListener('resize', DIUtils.debounce(resizeEvent, 100, {
                   leading: true,
                   trailing: false
                 }))
                 // 在计时结束之后执行
-                document.addEventListener('resize', XEUtils.debounce(resizeEvent, 100, {
+                document.addEventListener('resize', DIUtils.debounce(resizeEvent, 100, {
                   leading: false,
                   trailing: true
                 }))
 
-                let func = XEUtils.debounce(function (msg) {
+                let func = DIUtils.debounce(function (msg) {
                   console.log(msg)
                 }, 300)
                 func('计时结束之前执行一次')
@@ -1124,7 +1124,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.arrayEach([11, 22, 33], (item, key) => {
+                DIUtils.arrayEach([11, 22, 33], (item, key) => {
                   // 数组迭代器，只能用于遍历(数组或伪数组)，性能高于 each
                 })
                 `
@@ -1138,7 +1138,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.lastArrayEach([11, 22, 33], (item, key) => {
+                DIUtils.lastArrayEach([11, 22, 33], (item, key) => {
                   // 数组迭代器，只能用于遍历(数组或伪数组)，性能高于 lastEach
                 })
                 `
@@ -1152,10 +1152,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.slice([11, 22, 33, 44], 1) // [22, 33, 44]
-                XEUtils.slice([11, 22, 33, 44], 1, 3) // [22, 33]
+                DIUtils.slice([11, 22, 33, 44], 1) // [22, 33, 44]
+                DIUtils.slice([11, 22, 33, 44], 1, 3) // [22, 33]
                 function method () {
-                  XEUtils.slice(arguments, 1, 3) // [22, 33]
+                  DIUtils.slice(arguments, 1, 3) // [22, 33]
                 }
                 method(11, 22, 33, 44)
                 `
@@ -1169,8 +1169,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.indexOf([11, 22, 33, 22], 55) // -1
-                XEUtils.indexOf([11, 22, 33, 22], 22) // 1
+                DIUtils.indexOf([11, 22, 33, 22], 55) // -1
+                DIUtils.indexOf([11, 22, 33, 22], 22) // 1
                 `
               ]
             },
@@ -1182,8 +1182,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.arrayIndexOf([11, 22, 33, 22], 55) // -1
-                XEUtils.arrayIndexOf([11, 22, 33, 22], 22) // 1
+                DIUtils.arrayIndexOf([11, 22, 33, 22], 55) // -1
+                DIUtils.arrayIndexOf([11, 22, 33, 22], 22) // 1
                 `
               ]
             },
@@ -1195,8 +1195,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.findIndexOf([11, 22, 33, 22], item => item === 55) // -1
-                XEUtils.findIndexOf([11, 22, 33, 22], item => item === 22) // 1
+                DIUtils.findIndexOf([11, 22, 33, 22], item => item === 55) // -1
+                DIUtils.findIndexOf([11, 22, 33, 22], item => item === 22) // 1
                 `
               ]
             },
@@ -1208,8 +1208,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.lastIndexOf([11, 22, 33, 22], 55) // -1
-                XEUtils.lastIndexOf([11, 22, 33, 22], 22) // 3
+                DIUtils.lastIndexOf([11, 22, 33, 22], 55) // -1
+                DIUtils.lastIndexOf([11, 22, 33, 22], 22) // 3
                 `
               ]
             },
@@ -1221,8 +1221,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.arrayLastIndexOf([11, 22, 33, 22], 55) // -1
-                XEUtils.arrayLastIndexOf([11, 22, 33, 22], 22) // 3
+                DIUtils.arrayLastIndexOf([11, 22, 33, 22], 55) // -1
+                DIUtils.arrayLastIndexOf([11, 22, 33, 22], 22) // 3
                 `
               ]
             },
@@ -1234,8 +1234,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.findLastIndexOf([11, 22, 33, 22], item => item === 55) // -1
-                XEUtils.findLastIndexOf([11, 22, 33, 22], item => item === 22) // 3
+                DIUtils.findLastIndexOf([11, 22, 33, 22], item => item === 55) // -1
+                DIUtils.findLastIndexOf([11, 22, 33, 22], item => item === 22) // 3
                 `
               ]
             },
@@ -1247,8 +1247,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.includes([11], 22) // false
-                XEUtils.includes([11, 22], 22) // true
+                DIUtils.includes([11], 22) // false
+                DIUtils.includes([11, 22], 22) // true
                 `
               ]
             },
@@ -1260,10 +1260,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.includeArrays([11, 22, 33], []) // true
-                XEUtils.includeArrays([11, 22, 33], [11]) // true
-                XEUtils.includeArrays([11, 22, 33], [22, 33]) // true
-                XEUtils.includeArrays([11, 22, 33], [22, 44]) // false
+                DIUtils.includeArrays([11, 22, 33], []) // true
+                DIUtils.includeArrays([11, 22, 33], [11]) // true
+                DIUtils.includeArrays([11, 22, 33], [22, 33]) // true
+                DIUtils.includeArrays([11, 22, 33], [22, 44]) // false
                 `
               ]
             },
@@ -1276,9 +1276,9 @@ export default {
               codes: [
                 `
                 let list1 = [11, 22, 33, 44]
-                XEUtils.remove(list1, 2) // list1 = [11, 22, 44]
+                DIUtils.remove(list1, 2) // list1 = [11, 22, 44]
                 let list2 = [11, 22, 33, 44]
-                XEUtils.remove(list2, item => item === 22) // list2 = [11, 33, 44]
+                DIUtils.remove(list2, item => item === 22) // list2 = [11, 33, 44]
                 `
               ]
             },
@@ -1290,27 +1290,27 @@ export default {
               codes: [
                 `
                 // 数值排序
-                XEUtils.orderBy([11, 55, 99, 77, 11, 55, 22])
+                DIUtils.orderBy([11, 55, 99, 77, 11, 55, 22])
                 // [11,11,22,55,55,77,99]
-                XEUtils.orderBy([11, 55, 99, 77, 11, 55, 22], { order: 'desc' })
+                DIUtils.orderBy([11, 55, 99, 77, 11, 55, 22], { order: 'desc' })
                 // [99, 77, 55, 55, 22, 11, 11]
 
                 // 字母排序
-                XEUtils.orderBy(['x', 'z', 'g', 'q', 'e', 'b', 'a', 'g', 'f', 'c', 'j'])
+                DIUtils.orderBy(['x', 'z', 'g', 'q', 'e', 'b', 'a', 'g', 'f', 'c', 'j'])
                 // ["a","b","c","e","f","g","g","j","q","x","z"]
 
                 // 中文排序
-                XEUtils.orderBy(['小', '何', '李', '林', '有', '好', '啊', '的', '出', '库', '徐'])
+                DIUtils.orderBy(['小', '何', '李', '林', '有', '好', '啊', '的', '出', '库', '徐'])
                 // ["啊","出","的","好","何","库","李","林","小","徐","有"]
 
                 // 深层对象
-                XEUtils.orderBy([{ age: 27 }, { age: 26 }, { age: 28 }], 'age')
+                DIUtils.orderBy([{ age: 27 }, { age: 26 }, { age: 28 }], 'age')
                 // [{"age":26},{"age":27},{"age":28}]
-                XEUtils.orderBy([{ age: 27 }, { age: 26 }, { age: 28 }], [['age', 'asc']])
+                DIUtils.orderBy([{ age: 27 }, { age: 26 }, { age: 28 }], [['age', 'asc']])
                 // [{"age":26},{"age":27},{"age":28}]
 
                 // 多字段排序
-                XEUtils.orderBy([
+                DIUtils.orderBy([
                   { name: 'x', age: 26 },
                   { name: 'd', age: 27 },
                   { name: 'z', age: 26 },
@@ -1320,7 +1320,7 @@ export default {
                 // [{"name":"z","age":24},{"name":"z","age":25},{"name":"z","age":26},{"name":"x","age":26},{"name":"d","age":27}]
 
                 // 自定义组合排序
-                XEUtils.orderBy([
+                DIUtils.orderBy([
                   { name: 'x', age: 26 },
                   { name: 'd', age: 27 },
                   { name: 'x', age: 26 },
@@ -1338,7 +1338,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.shuffle([11, 22, 33, 44, 55]) // [22, 33, 55, 11, 44]
+                DIUtils.shuffle([11, 22, 33, 44, 55]) // [22, 33, 55, 11, 44]
                 `
               ]
             },
@@ -1350,7 +1350,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.sample([11, 22, 33, 44, 55], 3) // [22, 33, 55]
+                DIUtils.sample([11, 22, 33, 44, 55], 3) // [22, 33, 55]
                 `
               ]
             },
@@ -1362,7 +1362,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.some([{value: 11}, {value: 22}], item => item.value === 55) // false
+                DIUtils.some([{value: 11}, {value: 22}], item => item.value === 55) // false
                 `
               ]
             },
@@ -1374,7 +1374,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.every([{value: 11}, {value: 22}], item => item.value === 11) // false
+                DIUtils.every([{value: 11}, {value: 22}], item => item.value === 11) // false
                 `
               ]
             },
@@ -1386,7 +1386,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.filter([{value: 11}, {value: 22}], item => item.value > 11) // [{value: 22}]
+                DIUtils.filter([{value: 11}, {value: 22}], item => item.value > 11) // [{value: 22}]
                 `
               ]
             },
@@ -1398,7 +1398,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.find([{value: 11}, {value: 22}], item => item.value === 55) // null
+                DIUtils.find([{value: 11}, {value: 22}], item => item.value === 55) // null
                 `
               ]
             },
@@ -1410,8 +1410,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.findKey([{value: 11}, {value: 22}], item => item.value === 22) // '1'
-                XEUtils.findKey({aa: 11, bb: 22, cc: 33}, item => item === 22) // 'bb'
+                DIUtils.findKey([{value: 11}, {value: 22}], item => item.value === 22) // '1'
+                DIUtils.findKey({aa: 11, bb: 22, cc: 33}, item => item === 22) // 'bb'
                 `
               ]
             },
@@ -1423,7 +1423,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.map([{value: 11}, {value: 22}], item => item.value) // [11, 22]
+                DIUtils.map([{value: 11}, {value: 22}], item => item.value) // [11, 22]
                 `
               ]
             },
@@ -1435,8 +1435,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.copyWithin([11, 22, 33, 44], 0, 2) // [33, 44, 33, 44]
-                XEUtils.copyWithin([11, 22, 33, 44], 0, -1) // [44, 22, 33, 44]
+                DIUtils.copyWithin([11, 22, 33, 44], 0, 2) // [33, 44, 33, 44]
+                DIUtils.copyWithin([11, 22, 33, 44], 0, -1) // [44, 22, 33, 44]
                 `
               ]
             },
@@ -1448,9 +1448,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.sum([22, 66, 88]) // 176
-                XEUtils.sum([{value: 11}, {value: 22}, {value: 66}], 'value') // 99
-                XEUtils.sum({val1: 21, val2: 34, val3: 47}) // 102
+                DIUtils.sum([22, 66, 88]) // 176
+                DIUtils.sum([{value: 11}, {value: 22}, {value: 66}], 'value') // 99
+                DIUtils.sum({val1: 21, val2: 34, val3: 47}) // 102
                 `
               ]
             },
@@ -1462,11 +1462,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.mean({ val1: 21, val2: 34, val3: 47 }) // 34
-                XEUtils.mean([22, 66, 60, 60]) // 52
-                XEUtils.mean([{value: 34}, {value: 22}], 'value') // 28
-                XEUtils.mean([{value: 11}, {value: 22}, {value: 66}], item => item.value * 2) // 66
-                XEUtils.mean({val1: 21, val2: 34, val3: 45, val4: 55}) // 38.75
+                DIUtils.mean({ val1: 21, val2: 34, val3: 47 }) // 34
+                DIUtils.mean([22, 66, 60, 60]) // 52
+                DIUtils.mean([{value: 34}, {value: 22}], 'value') // 28
+                DIUtils.mean([{value: 11}, {value: 22}, {value: 66}], item => item.value * 2) // 66
+                DIUtils.mean({val1: 21, val2: 34, val3: 45, val4: 55}) // 38.75
                 `
               ]
             },
@@ -1478,11 +1478,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toArray([]) // []
-                XEUtils.toArray({}) // []
-                XEUtils.toArray({name: 'test1', age: 25}) // ['test1', 25]
-                XEUtils.toArray(arguments) // [...]
-                XEUtils.toArray(document.querySelectorAll('div')) // [...]
+                DIUtils.toArray([]) // []
+                DIUtils.toArray({}) // []
+                DIUtils.toArray({name: 'test1', age: 25}) // ['test1', 25]
+                DIUtils.toArray(arguments) // [...]
+                DIUtils.toArray(document.querySelectorAll('div')) // [...]
                 `
               ]
             },
@@ -1494,7 +1494,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.reduce([22, 66, 88], (previous, item) => previous + item) // 176
+                DIUtils.reduce([22, 66, 88], (previous, item) => previous + item) // 176
                 `
               ]
             },
@@ -1506,7 +1506,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.zip(['name1', 'name2', 'name3'], [true, true, false], [30, 40, 20])
+                DIUtils.zip(['name1', 'name2', 'name3'], [true, true, false], [30, 40, 20])
                 // [['name1', true, 30], ['name2', true, 40], ['name3', false, 20]]
                 `
               ]
@@ -1519,7 +1519,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.unzip([['name1', true, 30], ['name2', true, 40], ['name3', false, 20]])
+                DIUtils.unzip([['name1', true, 30], ['name2', true, 40], ['name3', false, 20]])
                 // [['name1', 'name2', 'name3'], [true, true, false], [30, 40, 20]]
                 `
               ]
@@ -1532,7 +1532,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.zipObject(['aa', 'bb', 'cc'], [11, 22, 33])
+                DIUtils.zipObject(['aa', 'bb', 'cc'], [11, 22, 33])
                 // { aa: 11, bb: 22, cc: 33 }
                 `
               ]
@@ -1545,7 +1545,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.uniq([11, 22, 33, 33, 22, 55]) // [11, 22, 33, 55]
+                DIUtils.uniq([11, 22, 33, 33, 22, 55]) // [11, 22, 33, 55]
                 `
               ]
             },
@@ -1557,7 +1557,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.union([11, 22], [33, 22], [44, 11]) // [11, 22, 33, 44]
+                DIUtils.union([11, 22], [33, 22], [44, 11]) // [11, 22, 33, 44]
                 `
               ]
             },
@@ -1569,7 +1569,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.flatten([[1, 2, 3], [4, 5, 6], [7, 8]])
+                DIUtils.flatten([[1, 2, 3], [4, 5, 6], [7, 8]])
                 // [1, 2, 3, 4, 5, 6, 7, 8]
                 `
               ]
@@ -1582,8 +1582,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.chunk(['a', 'b', 'c', 'd'], 2) // [['a', 'b'], ['c', 'd']]
-                XEUtils.chunk(['a', 'b', 'c', 'd'], 3) // [['a', 'b', 'c'], ['d']]
+                DIUtils.chunk(['a', 'b', 'c', 'd'], 2) // [['a', 'b'], ['c', 'd']]
+                DIUtils.chunk(['a', 'b', 'c', 'd'], 3) // [['a', 'b', 'c'], ['d']]
                 `
               ]
             },
@@ -1595,7 +1595,7 @@ export default {
               params: [],
               codes: [
                 `
-                let getName = XEUtils.property('name')
+                let getName = DIUtils.property('name')
                 getName({name: 'test11', age: 25, height: 176}) // 'test11'
                 getName({age: 25, height: 176}) // undefined
                 `
@@ -1609,8 +1609,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.pluck([{a: 11, b: 22}, {a: 33, b: 44}], 'a') // [11, 33]
-                XEUtils.pluck([[11, 22, 33], [44, 55, 66]], 1) // [22, 55]
+                DIUtils.pluck([{a: 11, b: 22}, {a: 33, b: 44}], 'a') // [11, 33]
+                DIUtils.pluck([[11, 22, 33], [44, 55, 66]], 1) // [22, 55]
                 `
               ]
             },
@@ -1622,10 +1622,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.invoke([[3, 1, 6, 7], [3, 2, 1, 8]], 'sort') // [[1, 3, 6, 7], [1, 2, 3, 8]]
-                XEUtils.invoke(['123', '456'], 'split') // [['123'], ['456']]
-                XEUtils.invoke([123, 456], String.prototype.split, '') // [['1', '2', '3'], ['4', '5', '6']]
-                XEUtils.invoke([{a: {b: [2, 0, 1]}}, {a: {b: [2, 1]}}, {a: {b: [4, 8, 1]}}], ['a', 'b', 'sort'])
+                DIUtils.invoke([[3, 1, 6, 7], [3, 2, 1, 8]], 'sort') // [[1, 3, 6, 7], [1, 2, 3, 8]]
+                DIUtils.invoke(['123', '456'], 'split') // [['123'], ['456']]
+                DIUtils.invoke([123, 456], String.prototype.split, '') // [['1', '2', '3'], ['4', '5', '6']]
+                DIUtils.invoke([{a: {b: [2, 0, 1]}}, {a: {b: [2, 1]}}, {a: {b: [4, 8, 1]}}], ['a', 'b', 'sort'])
                 // [[0, 1, 2], [1, 2], [1, 4, 8]]
                 `
               ]
@@ -1638,8 +1638,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.groupBy([{type: 'a'}, {type: 'b'}], 'type') // {a: [{type: 'a'}], b: [{type: 'b'}]}
-                XEUtils.groupBy([{type: 'a'}, {type: 'a'}, {type: 'b'}], 'type')
+                DIUtils.groupBy([{type: 'a'}, {type: 'b'}], 'type') // {a: [{type: 'a'}], b: [{type: 'b'}]}
+                DIUtils.groupBy([{type: 'a'}, {type: 'a'}, {type: 'b'}], 'type')
                 // {a: [{type: 'a'}, {type: 'a'}], b: [{type: 'b'}]}
                 `
               ]
@@ -1652,8 +1652,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.countBy([{type: 'a'}, {type: 'b'}], 'type') // {a: 1, b: 1}
-                XEUtils.countBy([{type: 'a'}, {type: 'a'}, {type: 'b'}], 'type') // {a: 2, b: 1}
+                DIUtils.countBy([{type: 'a'}, {type: 'b'}], 'type') // {a: 1, b: 1}
+                DIUtils.countBy([{type: 'a'}, {type: 'a'}, {type: 'b'}], 'type') // {a: 2, b: 1}
                 `
               ]
             },
@@ -1681,7 +1681,7 @@ export default {
                   {id: 3, name: '333'},
                   {id: 4, parentId: 2, name: '444'}
                 ]
-                XEUtils.toArrayTree(list1)
+                DIUtils.toArrayTree(list1)
                 /*
                 [
                   {
@@ -1719,7 +1719,7 @@ export default {
                   {id: 4, parentId: 2, name: '444', seq: 2},
                   {id: 5, parentId: 1, name: '555', seq: 1}
                 ]
-                XEUtils.toArrayTree(list2, {sortKey: 'seq'})
+                DIUtils.toArrayTree(list2, {sortKey: 'seq'})
                 /*
                 [
                   {
@@ -1768,7 +1768,7 @@ export default {
                   {id: 4, parentId: 2, name: '444'},
                   {id: 5, parentId: 22, name: '555'}
                 ]
-                XEUtils.toArrayTree(list3, {data: 'data'})
+                DIUtils.toArrayTree(list3, {data: 'data'})
                 /*
                 [
                   {
@@ -1812,7 +1812,7 @@ export default {
                   {id: 4, parentId: 2, name: '444'},
                   {id: 5, parentId: 22, name: '555'}
                 ]
-                XEUtils.toArrayTree(list4, {strict: true, parentKey: 'parentId', key: 'id', children: 'children', data: 'data'})
+                DIUtils.toArrayTree(list4, {strict: true, parentKey: 'parentId', key: 'id', children: 'children', data: 'data'})
                 /*
                 [
                   {
@@ -1883,7 +1883,7 @@ export default {
                     "children":[]
                   }
                 ]
-                XEUtils.toTreeArray(list1)
+                DIUtils.toTreeArray(list1)
                 /*
                 [
                   {id: 1, name: '111'},
@@ -1925,7 +1925,7 @@ export default {
                     "children":[]
                   }
                 ]
-                XEUtils.toTreeArray(list2, {data: 'data'})
+                DIUtils.toTreeArray(list2, {data: 'data'})
                 /*
                 [
                   {id: 1, name: '111'},
@@ -1964,7 +1964,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.findTree(tree1, item => item.id === 20) // { item: {id: 20}, ... }
+                DIUtils.findTree(tree1, item => item.id === 20) // { item: {id: 20}, ... }
 
                 var tree2 = [
                   { id: 1 },
@@ -1981,7 +1981,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.findTree(tree2, item => item.id === 20, { children: 'childs' }) // { item: {id: 20}, ... }
+                DIUtils.findTree(tree2, item => item.id === 20, { children: 'childs' }) // { item: {id: 20}, ... }
                 `
               ]
             },
@@ -2011,7 +2011,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.eachTree(tree1, item => {
+                DIUtils.eachTree(tree1, item => {
                   // ...
                 })
 
@@ -2030,7 +2030,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.eachTree(tree2, item => {
+                DIUtils.eachTree(tree2, item => {
                   // ...
                 }, { children: 'childs' })
                 `
@@ -2062,7 +2062,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.mapTree(tree1, item => {
+                DIUtils.mapTree(tree1, item => {
                   return {
                     id: item.id * 2
                   }
@@ -2097,7 +2097,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.mapTree(tree2, item => {
+                DIUtils.mapTree(tree2, item => {
                   return {
                     id: item.id * 2
                   }
@@ -2133,7 +2133,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.mapTree(tree3, item => {
+                DIUtils.mapTree(tree3, item => {
                   return {
                     id: item.id * 2
                   }
@@ -2182,7 +2182,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.filterTree(tree1, item => item.id === 1) 
+                DIUtils.filterTree(tree1, item => item.id === 1) 
                 // { id: 1 }
 
                 var tree2 = [
@@ -2200,7 +2200,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.filterTree(tree2, item => item.id >= 3, {children: 'childs'}) 
+                DIUtils.filterTree(tree2, item => item.id >= 3, {children: 'childs'}) 
                 // [
                 //   {
                 //     id: 3,
@@ -2246,7 +2246,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.searchTree(tree1, item => item.id === 3)
+                DIUtils.searchTree(tree1, item => item.id === 3)
                 // [
                 //   {
                 //     id: 3,
@@ -2283,7 +2283,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.searchTree(tree2, item => item.id === 30, { children: 'childs' })
+                DIUtils.searchTree(tree2, item => item.id === 30, { children: 'childs' })
                 // [
                 //   {
                 //     id: 3,
@@ -2319,7 +2319,7 @@ export default {
                     ]
                   }
                 ]
-                XEUtils.searchTree(tree3, item => item.id === 30, { children: 'childs', mapChildren: 'list' })
+                DIUtils.searchTree(tree3, item => item.id === 30, { children: 'childs', mapChildren: 'list' })
                 // [
                 //   {
                 //     id: 3,
@@ -2360,7 +2360,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.now() // Date.now() 获取当前时间戳 1514096716800
+                DIUtils.now() // Date.now() 获取当前时间戳 1514096716800
                 `
               ]
             },
@@ -2372,10 +2372,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.timestamp() // XEUtils.now() = Date.now() 获取当前时间戳 1514096716800
-                XEUtils.timestamp(new Date()) // 1514096716800
-                XEUtils.timestamp('2018-12-01') // 1543593600000
-                XEUtils.timestamp('2017/12/20 10:10:30.459', 'yyyy/MM/dd HH:mm:ss.SSS') // 1513735830459
+                DIUtils.timestamp() // DIUtils.now() = Date.now() 获取当前时间戳 1514096716800
+                DIUtils.timestamp(new Date()) // 1514096716800
+                DIUtils.timestamp('2018-12-01') // 1543593600000
+                DIUtils.timestamp('2017/12/20 10:10:30.459', 'yyyy/MM/dd HH:mm:ss.SSS') // 1513735830459
                 `
               ]
             },
@@ -2397,25 +2397,25 @@ export default {
               ],
               codes: [
                 `
-                XEUtils.toStringDate('12/20/2017')
+                DIUtils.toStringDate('12/20/2017')
                 // 如果解析错误则返回 'Invalid Date'
-                XEUtils.toStringDate('2017-12-20')
+                DIUtils.toStringDate('2017-12-20')
                 // Wed Dec 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('2017-12-20 10:10:30')
+                DIUtils.toStringDate('2017-12-20 10:10:30')
                 // Wed Dec 20 2017 10:10:30 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('2017-12-20T10:10:30.738+0800')
+                DIUtils.toStringDate('2017-12-20T10:10:30.738+0800')
                 // Wed Dec 20 2017 10:10:30 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('2017-12-20T10:10:30.738+01:00')
+                DIUtils.toStringDate('2017-12-20T10:10:30.738+01:00')
                 // Wed Dec 20 2017 17:10:30 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('2017-12-20T10:10:30.738Z')
+                DIUtils.toStringDate('2017-12-20T10:10:30.738Z')
                 // Wed Dec 20 2017 18:10:30 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('12/20/2017', 'MM/dd/yyyy')
+                DIUtils.toStringDate('12/20/2017', 'MM/dd/yyyy')
                 // Wed Dec 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('20171220101030', 'yyyyMMddHHmmss')
+                DIUtils.toStringDate('20171220101030', 'yyyyMMddHHmmss')
                 // Wed Dec 20 2017 10:10:30 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('2017/12/20 10:10:30', 'yyyy/MM/dd HH:mm:ss')
+                DIUtils.toStringDate('2017/12/20 10:10:30', 'yyyy/MM/dd HH:mm:ss')
                 // Wed Dec 20 2017 10:10:00 GMT+0800 (中国标准时间)
-                XEUtils.toStringDate('12/20/2017 10:10:30.100', 'MM/dd/yyyy HH:mm:ss.SSS')
+                DIUtils.toStringDate('12/20/2017 10:10:30.100', 'MM/dd/yyyy HH:mm:ss.SSS')
                 // Wed Dec 20 2017 10:10:30 GMT+0800 (中国标准时间)
                 `
               ]
@@ -2457,31 +2457,31 @@ export default {
               ],
               codes: [
                 `
-                XEUtils.toDateString(1483250730000)
+                DIUtils.toDateString(1483250730000)
                 // '2017-01-01 14:05:30'
-                XEUtils.toDateString(new Date())
+                DIUtils.toDateString(new Date())
                 // '2017-01-01 14:05:30'
-                XEUtils.toDateString('2017-01-01 10:05:30', 'MM/dd/yyyy')
+                DIUtils.toDateString('2017-01-01 10:05:30', 'MM/dd/yyyy')
                 // '01/01/2017'
-                XEUtils.toDateString('2017-01-01 10:05:30', 'M/d/yyyy')
+                DIUtils.toDateString('2017-01-01 10:05:30', 'M/d/yyyy')
                 // '1/1/2017'
-                XEUtils.toDateString(new Date(), 'yyyyMMddHHmmssSSS')
+                DIUtils.toDateString(new Date(), 'yyyyMMddHHmmssSSS')
                 // '20170101140530099'
-                XEUtils.toDateString(new Date(), 'yyyy-MM-dd HH:mm:ss.SSS')
+                DIUtils.toDateString(new Date(), 'yyyy-MM-dd HH:mm:ss.SSS')
                 // '2017-01-01 14:05:30.099'
-                XEUtils.toDateString(new Date(), 'yyyy-MM-dd hh:mm:ss.SSS GMTZ')
+                DIUtils.toDateString(new Date(), 'yyyy-MM-dd hh:mm:ss.SSS GMTZ')
                 // '2017-01-01 02:05:30.099 GMT+08:00'
-                XEUtils.toDateString(new Date(), 'yyyy-MM-dd hh:mm:ss.SSS GMTZZ')
+                DIUtils.toDateString(new Date(), 'yyyy-MM-dd hh:mm:ss.SSS GMTZZ')
                 // '2017-01-01 02:05:30.099 GMT+0800'
-                XEUtils.toDateString(new Date(), 'yyyy-M-d h:m:s.S')
+                DIUtils.toDateString(new Date(), 'yyyy-M-d h:m:s.S')
                 // '2017-1-1 2:5:30.99'
-                XEUtils.toDateString(new Date(), 'yyyy年MM月dd日 HH时mm分ss秒S毫秒,星期E 第q季度')
+                DIUtils.toDateString(new Date(), 'yyyy年MM月dd日 HH时mm分ss秒S毫秒,星期E 第q季度')
                 // '2017年01月01日 14时05分30秒99毫秒,星期0 第1季度'
-                XEUtils.toDateString(new Date(), 'yy年M月d日 HH时m分s秒S毫秒,星期E 第q季度')
+                DIUtils.toDateString(new Date(), 'yy年M月d日 HH时m分s秒S毫秒,星期E 第q季度')
                 // '17年1月1日 14时5分30秒99毫秒,星期0 第1季度'
-                XEUtils.toDateString(new Date(), 'yyyy年MM月dd日 hh时mm分ss秒SSS毫秒 ZZ 星期E e 第q季 今年第D天 a A')
+                DIUtils.toDateString(new Date(), 'yyyy年MM月dd日 hh时mm分ss秒SSS毫秒 ZZ 星期E e 第q季 今年第D天 a A')
                 // '2017年01月01日 02时05分30秒099毫秒 +0800 星期0 -1 第1季 今年第1天 pm PM'
-                XEUtils.toDateString(new Date(), '[yyyy-MM] yyyy-MM-dd')
+                DIUtils.toDateString(new Date(), '[yyyy-MM] yyyy-MM-dd')
                 // 'yyyy-MM 2017-01-01'
                 `
               ]
@@ -2494,12 +2494,12 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getWhatYear(new Date(), -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatYear(1513735830000, -1) // Tue Dec 20 2016 10:10:30 GMT+0800 (中国标准时间)
-                XEUtils.getWhatYear('2017-12-20', -1) // Tue Dec 20 2016 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatYear('2017-12-20', 1) // Thu Dec 20 2018 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatYear('2017-12-20', 0, 'first') // Sun Jan 01 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatYear('2017-12-20', 0, 'last') // Sun Dec 31 2017 23:59:59 GMT+0800 (中国标准时间)
+                DIUtils.getWhatYear(new Date(), -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatYear(1513735830000, -1) // Tue Dec 20 2016 10:10:30 GMT+0800 (中国标准时间)
+                DIUtils.getWhatYear('2017-12-20', -1) // Tue Dec 20 2016 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatYear('2017-12-20', 1) // Thu Dec 20 2018 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatYear('2017-12-20', 0, 'first') // Sun Jan 01 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatYear('2017-12-20', 0, 'last') // Sun Dec 31 2017 23:59:59 GMT+0800 (中国标准时间)
                 `
               ]
             },
@@ -2511,12 +2511,12 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getWhatMonth(new Date(), -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatMonth(1513735830000, -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatMonth('2017-12-20', -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatMonth('2017-12-20', 1) // Sat Jan 20 2018 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatMonth('2017-12-20', -1, 'first') // Wed Nov 01 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatMonth('2017-12-20', 1, 'last') // Wed Jan 31 2018 23:59:59 GMT+0800 (中国标准时间)
+                DIUtils.getWhatMonth(new Date(), -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatMonth(1513735830000, -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatMonth('2017-12-20', -1) // Mon Nov 20 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatMonth('2017-12-20', 1) // Sat Jan 20 2018 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatMonth('2017-12-20', -1, 'first') // Wed Nov 01 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatMonth('2017-12-20', 1, 'last') // Wed Jan 31 2018 23:59:59 GMT+0800 (中国标准时间)
                 `
               ]
             },
@@ -2528,12 +2528,12 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getWhatWeek(new Date(), -1) // Sun Dec 17 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatWeek(1513735830000, -1) // Sun Dec 17 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatWeek('2017-12-20', -1) // Sun Dec 17 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatWeek('2017-12-20', 1) // Sun Dec 31 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatWeek('2017-12-20', -1, 5) // Fri Dec 15 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatWeek('2017-12-20', 1, 0) // Sun Dec 31 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatWeek(new Date(), -1) // Sun Dec 17 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatWeek(1513735830000, -1) // Sun Dec 17 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatWeek('2017-12-20', -1) // Sun Dec 17 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatWeek('2017-12-20', 1) // Sun Dec 31 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatWeek('2017-12-20', -1, 5) // Fri Dec 15 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatWeek('2017-12-20', 1, 0) // Sun Dec 31 2017 00:00:00 GMT+0800 (中国标准时间)
                 `
               ]
             },
@@ -2545,12 +2545,12 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getWhatDay(new Date(), -1) // Tue Dec 19 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatDay(1513735830000, -1) // Tue Dec 19 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatDay('2017-12-20', -1) // Tue Dec 19 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatDay('2017-12-20', 1) // Tue Dec 21 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatDay('2017-12-20', 0, 'first') // Wed Dec 20 2017 00:00:00 GMT+0800 (中国标准时间)
-                XEUtils.getWhatDay('2017-12-20', 0, 'last') // Wed Dec 20 2017 23:59:59 GMT+0800 (中国标准时间)
+                DIUtils.getWhatDay(new Date(), -1) // Tue Dec 19 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatDay(1513735830000, -1) // Tue Dec 19 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatDay('2017-12-20', -1) // Tue Dec 19 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatDay('2017-12-20', 1) // Tue Dec 21 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatDay('2017-12-20', 0, 'first') // Wed Dec 20 2017 00:00:00 GMT+0800 (中国标准时间)
+                DIUtils.getWhatDay('2017-12-20', 0, 'last') // Wed Dec 20 2017 23:59:59 GMT+0800 (中国标准时间)
                 `
               ]
             },
@@ -2562,11 +2562,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getDayOfYear(new Date()) // 365
-                XEUtils.getDayOfYear(1513735830000) // 365
-                XEUtils.getDayOfYear('2017-12-20') // 365
-                XEUtils.getDayOfYear('2019-12-20', 1) // 366
-                XEUtils.getDayOfYear('2020-12-20') // 366
+                DIUtils.getDayOfYear(new Date()) // 365
+                DIUtils.getDayOfYear(1513735830000) // 365
+                DIUtils.getDayOfYear('2017-12-20') // 365
+                DIUtils.getDayOfYear('2019-12-20', 1) // 366
+                DIUtils.getDayOfYear('2020-12-20') // 366
                 `
               ]
             },
@@ -2578,9 +2578,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getYearDay(new Date()) // 149
-                XEUtils.getYearDay('2017-01-20') // 20
-                XEUtils.getYearDay('2018-05-20') // 140
+                DIUtils.getYearDay(new Date()) // 149
+                DIUtils.getYearDay('2017-01-20') // 20
+                DIUtils.getYearDay('2018-05-20') // 140
                 `
               ]
             },
@@ -2592,9 +2592,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getYearWeek(new Date()) // 22
-                XEUtils.getYearWeek('2017-01-20') // 3
-                XEUtils.getYearWeek('2018-05-20') // 20
+                DIUtils.getYearWeek(new Date()) // 22
+                DIUtils.getYearWeek('2017-01-20') // 3
+                DIUtils.getYearWeek('2018-05-20') // 20
                 `
               ]
             },
@@ -2606,9 +2606,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getMonthWeek(new Date()) // 4
-                XEUtils.getMonthWeek('2017-01-20') // 3
-                XEUtils.getMonthWeek('2018-05-20') // 2
+                DIUtils.getMonthWeek(new Date()) // 4
+                DIUtils.getMonthWeek('2017-01-20') // 3
+                DIUtils.getMonthWeek('2018-05-20') // 2
                 `
               ]
             },
@@ -2620,11 +2620,11 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getDayOfMonth(new Date()) // 31
-                XEUtils.getDayOfMonth(1513735830000) // 31
-                XEUtils.getDayOfMonth('2017-12-20') // 31
-                XEUtils.getDayOfMonth('2017-12-20', -1) // 30
-                XEUtils.getDayOfMonth('2017-12-20', 1) // 31
+                DIUtils.getDayOfMonth(new Date()) // 31
+                DIUtils.getDayOfMonth(1513735830000) // 31
+                DIUtils.getDayOfMonth('2017-12-20') // 31
+                DIUtils.getDayOfMonth('2017-12-20', -1) // 30
+                DIUtils.getDayOfMonth('2017-12-20', 1) // 31
                 `
               ]
             },
@@ -2636,13 +2636,13 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getDateDiff('2017-11-20', '2017-12-21')
+                DIUtils.getDateDiff('2017-11-20', '2017-12-21')
                 // { done: true, time: 2678400000, yyyy: 0, MM: 1, dd: 1, HH: 0, mm: 0, ss: 0, S: 0 }
-                XEUtils.getDateDiff('2017-12-20', '2017-12-21')
+                DIUtils.getDateDiff('2017-12-20', '2017-12-21')
                 // { done: true, time: 86400000, yyyy: 0, MM: 0, dd: 1, HH: 0, mm: 0, ss: 0, S: 0 }
-                XEUtils.getDateDiff('2018-01-01', '2017-12-21')
+                DIUtils.getDateDiff('2018-01-01', '2017-12-21')
                 // { done: false, time: 0 }
-                let dateDiff = XEUtils.getDateDiff('2017-12-20 10:10:30', '2017-12-21 10:15:00')
+                let dateDiff = DIUtils.getDateDiff('2017-12-20 10:10:30', '2017-12-21 10:15:00')
                 let content = \`\${dateDiff.mm}分\${dateDiff.ss}秒\`
                 // '4分30秒'
                 `
@@ -2663,10 +2663,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.random() // 0 ~ 9
-                XEUtils.random(3, 6) // 3 ~ 6
-                XEUtils.random(0, 5) // 0 ~ 5
-                XEUtils.random(10, 100) // 10 ~ 100
+                DIUtils.random() // 0 ~ 9
+                DIUtils.random(3, 6) // 3 ~ 6
+                DIUtils.random(0, 5) // 0 ~ 5
+                DIUtils.random(10, 100) // 10 ~ 100
                 `
               ]
             },
@@ -2678,9 +2678,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.min([22, 66, 77, 11]) // 11
-                XEUtils.min([{a: 11}, {a: 44}], 'a') // {a: 11}
-                XEUtils.min([{a: 11}, {a: 44}], item => item.a) // {a: 11}
+                DIUtils.min([22, 66, 77, 11]) // 11
+                DIUtils.min([{a: 11}, {a: 44}], 'a') // {a: 11}
+                DIUtils.min([{a: 11}, {a: 44}], item => item.a) // {a: 11}
                 `
               ]
             },
@@ -2692,9 +2692,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.max([22, 66, 77, 11]) // 77
-                XEUtils.max([{a: 11}, {a: 44}], 'a') // {a: 44}
-                XEUtils.max([{a: 11}, {a: 44}], item => item.a) // {a: 44}
+                DIUtils.max([22, 66, 77, 11]) // 77
+                DIUtils.max([{a: 11}, {a: 44}], 'a') // {a: 44}
+                DIUtils.max([{a: 11}, {a: 44}], item => item.a) // {a: 44}
                 `
               ]
             },
@@ -2706,8 +2706,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.round(123.455, 2) // 123.46
-                XEUtils.round(123.452, 2) // 123.45
+                DIUtils.round(123.455, 2) // 123.46
+                DIUtils.round(123.452, 2) // 123.45
                 `
               ]
             },
@@ -2719,8 +2719,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.ceil(123.455, 2) // 123.46
-                XEUtils.ceil(123.452, 2) // 123.46
+                DIUtils.ceil(123.455, 2) // 123.46
+                DIUtils.ceil(123.452, 2) // 123.46
                 `
               ]
             },
@@ -2732,8 +2732,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.floor(123.455, 2) // 123.45
-                XEUtils.floor(123.452, 2) // 123.45
+                DIUtils.floor(123.455, 2) // 123.45
+                DIUtils.floor(123.452, 2) // 123.45
                 `
               ]
             },
@@ -2745,9 +2745,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toFixed(123.455, 2) // 123.45
-                XEUtils.toFixed(123.452, 2) // 123.45
-                XEUtils.toFixed(123.452, 4) // 123.4520
+                DIUtils.toFixed(123.455, 2) // 123.45
+                DIUtils.toFixed(123.452, 2) // 123.45
+                DIUtils.toFixed(123.452, 4) // 123.4520
                 `
               ]
             },
@@ -2769,13 +2769,13 @@ export default {
               codes: [
                 `
                 // 千分位格式化
-                XEUtils.commafy(1000000) // '1,000,000'
+                DIUtils.commafy(1000000) // '1,000,000'
                 // 格式化金额
-                XEUtils.commafy(1000000.5678, { digits: 2 }) // '1,000,000.57'
+                DIUtils.commafy(1000000.5678, { digits: 2 }) // '1,000,000.57'
                 // 字符串每隔4位用空格分隔
-                XEUtils.commafy('6660000000000001', {spaceNumber: 4, separator: ' '}) // '6660 0000 0000 0001'
+                DIUtils.commafy('6660000000000001', {spaceNumber: 4, separator: ' '}) // '6660 0000 0000 0001'
                 // 字符串每隔3位用逗号分割
-                XEUtils.commafy('abcdeabcdeabcdeabcde', { spaceNumber: 5, separator: ' ' }) // 'abcde abcde abcde abcde'
+                DIUtils.commafy('abcdeabcdeabcdeabcde', { spaceNumber: 5, separator: ' ' }) // 'abcde abcde abcde abcde'
                 `
               ]
             },
@@ -2787,9 +2787,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toNumber(123) // 123
-                XEUtils.toNumber('12.3') // 12.3
-                XEUtils.toNumber('abc') // 0
+                DIUtils.toNumber(123) // 123
+                DIUtils.toNumber('12.3') // 12.3
+                DIUtils.toNumber('abc') // 0
                 `
               ]
             },
@@ -2801,8 +2801,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toNumberString(1e-14) // '0.00000000000001'
-                XEUtils.toNumberString(1e+22) // '10000000000000000000000'
+                DIUtils.toNumberString(1e-14) // '0.00000000000001'
+                DIUtils.toNumberString(1e+22) // '10000000000000000000000'
                 `
               ]
             },
@@ -2814,9 +2814,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toInteger(123) // 123
-                XEUtils.toInteger('12.3') // 12
-                XEUtils.toInteger('abc') // 0
+                DIUtils.toInteger(123) // 123
+                DIUtils.toInteger('12.3') // 12
+                DIUtils.toInteger('abc') // 0
                 `
               ]
             },
@@ -2828,9 +2828,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.add(10, 20) // 30
-                XEUtils.add(3.84, 4.78) // 8.62
-                XEUtils.add(0.4598, 5.024666) // 5.484466
+                DIUtils.add(10, 20) // 30
+                DIUtils.add(3.84, 4.78) // 8.62
+                DIUtils.add(0.4598, 5.024666) // 5.484466
                 `
               ]
             },
@@ -2842,9 +2842,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.subtract(20, 10) // 10
-                XEUtils.subtract(6.66, 3.9) // 2.76
-                XEUtils.subtract(5.024664, 0.453) // 4.571664
+                DIUtils.subtract(20, 10) // 10
+                DIUtils.subtract(6.66, 3.9) // 2.76
+                DIUtils.subtract(5.024664, 0.453) // 4.571664
                 `
               ]
             },
@@ -2856,9 +2856,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.multiply(20, 10) // 200
-                XEUtils.multiply(6.66, 3.7) // 24.642
-                XEUtils.multiply(5.024664, 0.453) // 2.276172792
+                DIUtils.multiply(20, 10) // 200
+                DIUtils.multiply(6.66, 3.7) // 24.642
+                DIUtils.multiply(5.024664, 0.453) // 2.276172792
                 `
               ]
             },
@@ -2870,9 +2870,9 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.divide(20, 10) // 2
-                XEUtils.divide(2.997, 0.9) // 3.33
-                XEUtils.divide(182.967, 25.77) // 7.1
+                DIUtils.divide(20, 10) // 2
+                DIUtils.divide(2.997, 0.9) // 3.33
+                DIUtils.divide(182.967, 25.77) // 7.1
                 `
               ]
             }
@@ -2891,10 +2891,10 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.toValueString(0) // '0'
-                XEUtils.toValueString(1e-5) // '0.00001'
-                XEUtils.toValueString(null) // ''
-                XEUtils.toValueString(undefined) // ''
+                DIUtils.toValueString(0) // '0'
+                DIUtils.toValueString(1e-5) // '0.00001'
+                DIUtils.toValueString(null) // ''
+                DIUtils.toValueString(undefined) // ''
                 `
               ]
             },
@@ -2906,7 +2906,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.trim(' abc ') // 'abc'
+                DIUtils.trim(' abc ') // 'abc'
                 `
               ]
             },
@@ -2918,7 +2918,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.trimLeft(' abc ') // 'abc '
+                DIUtils.trimLeft(' abc ') // 'abc '
                 `
               ]
             },
@@ -2930,7 +2930,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.trimRight(' abc ') // ' abc'
+                DIUtils.trimRight(' abc ') // ' abc'
                 `
               ]
             },
@@ -2942,7 +2942,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.escape('<a>link</a>') // '&lt;a&gt;link&lt;/a&gt;'
+                DIUtils.escape('<a>link</a>') // '&lt;a&gt;link&lt;/a&gt;'
                 `
               ]
             },
@@ -2954,7 +2954,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.unescape('&lt;a&gt;link&lt;/a&gt;') // '<a>link</a>'
+                DIUtils.unescape('&lt;a&gt;link&lt;/a&gt;') // '<a>link</a>'
                 `
               ]
             },
@@ -2966,7 +2966,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.camelCase('project-name') // 'projectName'
+                DIUtils.camelCase('project-name') // 'projectName'
                 `
               ]
             },
@@ -2978,7 +2978,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.kebabCase('projectName') // 'project-name'
+                DIUtils.kebabCase('projectName') // 'project-name'
                 `
               ]
             },
@@ -2990,8 +2990,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.repeat('a', 5) // 'aaaaa'
-                XEUtils.repeat('ab', 3) // 'ababab'
+                DIUtils.repeat('a', 5) // 'aaaaa'
+                DIUtils.repeat('ab', 3) // 'ababab'
                 `
               ]
             },
@@ -3003,7 +3003,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.padStart('a', 5, 'b') // 'bbbba'
+                DIUtils.padStart('a', 5, 'b') // 'bbbba'
                 `
               ]
             },
@@ -3015,7 +3015,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.padEnd('a', 5, 'b') // 'abbbb'
+                DIUtils.padEnd('a', 5, 'b') // 'abbbb'
                 `
               ]
             },
@@ -3027,7 +3027,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.startsWith('abc', 'b') // false
+                DIUtils.startsWith('abc', 'b') // false
                 `
               ]
             },
@@ -3039,7 +3039,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.endsWith('abc', 5, 'a') // false
+                DIUtils.endsWith('abc', 5, 'a') // false
                 `
               ]
             },
@@ -3051,8 +3051,8 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.template('{{ name }}', {name: 'test1'}) // test1
-                XEUtils.template('{{ name }} {{{age}}}', {name: 'test1', age: 26}) // test1 {26}
+                DIUtils.template('{{ name }}', {name: 'test1'}) // test1
+                DIUtils.template('{{ name }} {{{age}}}', {name: 'test1', age: 26}) // test1 {26}
                 `
               ]
             }
@@ -3071,7 +3071,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.parseUrl('http://localhost:8080/demo/#/home?id=123')
+                DIUtils.parseUrl('http://localhost:8080/demo/#/home?id=123')
                 // {
                 //   hash: '#/home?id=123',
                 //   hashKey: '/home',
@@ -3100,7 +3100,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.serialize({id: 123, name: 'test1'}) // id=123&name=test1
+                DIUtils.serialize({id: 123, name: 'test1'}) // id=123&name=test1
                 `
               ]
             },
@@ -3112,7 +3112,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.unserialize('id=123&name=test1') // {id: '123', name: 'test1'}
+                DIUtils.unserialize('id=123&name=test1') // {id: '123', name: 'test1'}
                 `
               ]
             }
@@ -3131,7 +3131,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.browse()
+                DIUtils.browse()
                 // {
                 //   "-khtml": false,
                 //   "-moz": false,
@@ -3156,7 +3156,7 @@ export default {
               codes: [
                 `
                 // http://localhost:8080/demo?id=123
-                XEUtils.locat()
+                DIUtils.locat()
                 // {
                 //   hash: '',
                 //   hashKey: '',
@@ -3185,7 +3185,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.getBaseURL() // http://localhost/demo/
+                DIUtils.getBaseURL() // http://localhost/demo/
                 `
               ]
             },
@@ -3198,54 +3198,54 @@ export default {
               codes: [
                 `
                 // 获取所有
-                XEUtils.cookie()
+                DIUtils.cookie()
                 // 根据name获取
-                XEUtils.cookie('name')
+                DIUtils.cookie('name')
                 // 删除
-                XEUtils.cookie('name', null, {expires: -1})
-                XEUtils.cookie('name', null, {expires: -1, path: '/'})
+                DIUtils.cookie('name', null, {expires: -1})
+                DIUtils.cookie('name', null, {expires: -1, path: '/'})
                 // 添加/修改
-                XEUtils.cookie('name', 'value')
+                DIUtils.cookie('name', 'value')
                 // 指定 10 秒后过期
-                XEUtils.cookie('name', 'value', {expires: '10s'})
+                DIUtils.cookie('name', 'value', {expires: '10s'})
                 // 指定 1 分钟后过期
-                XEUtils.cookie('name', 'value', {expires: '1m'})
+                DIUtils.cookie('name', 'value', {expires: '1m'})
                 // 指定 1 小时后过期
-                XEUtils.cookie('name', 'value', {expires: '1H'})
+                DIUtils.cookie('name', 'value', {expires: '1H'})
                 // 指定 1 天后过期
-                XEUtils.cookie('name', 'value', {expires: '1d'})
+                DIUtils.cookie('name', 'value', {expires: '1d'})
                 // 指定 1 月后过期
-                XEUtils.cookie('name', 'value', {expires: '1M'})
+                DIUtils.cookie('name', 'value', {expires: '1M'})
                 // 指定 1 年后过期
-                XEUtils.cookie('name', 'value', {expires: '1y'})
+                DIUtils.cookie('name', 'value', {expires: '1y'})
                 // 指定时间戳后过期
-                XEUtils.cookie('name', 'value', {expires: 1525541938031})
+                DIUtils.cookie('name', 'value', {expires: 1525541938031})
                 // 指定日期过期
-                XEUtils.cookie('name', 'value', {expires: new Date()})
+                DIUtils.cookie('name', 'value', {expires: new Date()})
                 // 指定 UTCString 格式日期
-                XEUtils.cookie('name', 'value', {expires: new Date().toUTCString()})
+                DIUtils.cookie('name', 'value', {expires: new Date().toUTCString()})
                 // 指定数值 1 天后过期
-                XEUtils.cookie('name', 'value', {expires: 1})
+                DIUtils.cookie('name', 'value', {expires: 1})
                 // 完整设置domain/path/secure/expires
-                XEUtils.cookie('name', 'value', {domain: 'xxx.com', path: '/', expires: 7, secure: true})
+                DIUtils.cookie('name', 'value', {domain: 'xxx.com', path: '/', expires: 7, secure: true})
 
                 // 批量删除
-                XEUtils.cookie([{name: 'name', expires: -1}])
+                DIUtils.cookie([{name: 'name', expires: -1}])
                 // 批量添加/修改
-                XEUtils.cookie([{name: 'name', value: 'value'}])
+                DIUtils.cookie([{name: 'name', value: 'value'}])
                 // 批量添加并设置domain/path/secure/expires 7天后过期
-                XEUtils.cookie([{name: 'name', value: 'value', domain: 'xxx.com', path: '/', expires: 7, secure: true}])
+                DIUtils.cookie([{name: 'name', value: 'value', domain: 'xxx.com', path: '/', expires: 7, secure: true}])
 
                 // 判断name是否存在
-                XEUtils.cookie.has(name)
+                DIUtils.cookie.has(name)
                 // 添加
-                XEUtils.cookie.set(name, value, option)
-                XEUtils.cookie.set(name, value, option).set(name, value, option)
+                DIUtils.cookie.set(name, value, option)
+                DIUtils.cookie.set(name, value, option).set(name, value, option)
                 // 根据name获取
-                XEUtils.cookie.get(name)
+                DIUtils.cookie.get(name)
                 // 删除
-                XEUtils.cookie.remove(name)
-                XEUtils.cookie.remove(name, {path: '/'})
+                DIUtils.cookie.remove(name)
+                DIUtils.cookie.remove(name, {path: '/'})
                 `
               ]
             }
@@ -3264,7 +3264,7 @@ export default {
               params: [],
               codes: [
                 `
-                XEUtils.setup({
+                DIUtils.setup({
                   cookies: {
                     path: '/'
                   },
@@ -3283,15 +3283,15 @@ export default {
             {
               name: 'mixin',
               args: 'func',
-              title: '扩展函数，将您自己的实用函数扩展到 XEUtils',
+              title: '扩展函数，将您自己的实用函数扩展到 DIUtils',
               desc: '',
               params: [],
               codes: [
                 `
-                XEUtils.mixin({
+                DIUtils.mixin({
                   toDateDiffText (date) {
                     let currDate = 1544407800000 // '2018-12-10 10:10:00'
-                    let dateDiff = XEUtils.getDateDiff(date, currDate)
+                    let dateDiff = DIUtils.getDateDiff(date, currDate)
                     if (dateDiff.done) {
                       if (dateDiff.time < 31536000000) {
                         if (dateDiff.time < 2592000000) {
@@ -3317,13 +3317,13 @@ export default {
                   }
                 })
 
-                XEUtils.toDateDiffText('2018-12-10 10:09:59') // 刚刚
-                XEUtils.toDateDiffText('2018-12-10 10:09:30') // 30秒之前
-                XEUtils.toDateDiffText('2018-12-10 10:09:30') // 2分钟之前
-                XEUtils.toDateDiffText('2018-12-10 02:10:00') // 8小时之前
-                XEUtils.toDateDiffText('2018-12-09 04:09:30') // 1天之前
-                XEUtils.toDateDiffText('2018-04-09 04:09:30') // 8个月之前
-                XEUtils.toDateDiffText('2016-06-09 04:09:30') // 2年之前
+                DIUtils.toDateDiffText('2018-12-10 10:09:59') // 刚刚
+                DIUtils.toDateDiffText('2018-12-10 10:09:30') // 30秒之前
+                DIUtils.toDateDiffText('2018-12-10 10:09:30') // 2分钟之前
+                DIUtils.toDateDiffText('2018-12-10 02:10:00') // 8小时之前
+                DIUtils.toDateDiffText('2018-12-09 04:09:30') // 1天之前
+                DIUtils.toDateDiffText('2018-04-09 04:09:30') // 8个月之前
+                DIUtils.toDateDiffText('2016-06-09 04:09:30') // 2年之前
                 `
               ]
             }
@@ -3337,8 +3337,8 @@ export default {
       if (this.filterName) {
         const filterName = this.filterName.toLowerCase()
         const filterRE = new RegExp(filterName, 'gi')
-        const list = window.XEUtils.searchTree(this.list, item => (item.name || '').toLowerCase().indexOf(filterName) > -1 || (item.title || '').toLowerCase().indexOf(filterName) > -1, { children: 'children' })
-        window.XEUtils.eachTree(list, item => {
+        const list = window.DIUtils.searchTree(this.list, item => (item.name || '').toLowerCase().indexOf(filterName) > -1 || (item.title || '').toLowerCase().indexOf(filterName) > -1, { children: 'children' })
+        window.DIUtils.eachTree(list, item => {
           item.name = (item.name || '').replace(filterRE, match => `<span class="keyword-lighten">${match}</span>`)
           item.title = (item.title || '').replace(filterRE, match => `<span class="keyword-lighten">${match}</span>`)
         }, { children: 'children' })
@@ -3361,7 +3361,7 @@ export default {
   },
   created () {
     let id = 1
-    window.XEUtils.eachTree(this.apiList, item => {
+    window.DIUtils.eachTree(this.apiList, item => {
       item.id = id++
     })
     this.selected = this.apiList[0].children[0]

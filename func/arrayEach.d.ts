@@ -8,7 +8,7 @@ export declare function arrayEach<T, C>(list: T[] | ArrayLike<T>, iterate: (this
 export declare function arrayEach<C>(obj: any[], iterate: (this: C, item: any, index: number, obj: any) => void, context?: C): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     arrayEach: typeof arrayEach;
   }
 }

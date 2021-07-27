@@ -18,7 +18,7 @@ export interface ThrottleOptions {
 export declare function throttle<C>(callback: (this: C, ...args: any[]) => any, wait: number, options?: ThrottleOptions): (this: C, ...args: any[]) => any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     throttle: typeof throttle;
   }
 }

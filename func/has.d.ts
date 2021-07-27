@@ -6,7 +6,7 @@
 export declare function has(obj: any, property: string | string[]): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     has: typeof has;
   }
 }

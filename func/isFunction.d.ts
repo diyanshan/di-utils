@@ -5,7 +5,7 @@
 export declare function isFunction(val: any): val is Function;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isFunction: typeof isFunction;
   }
 }

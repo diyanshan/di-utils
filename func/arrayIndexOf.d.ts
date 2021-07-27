@@ -7,7 +7,7 @@ export declare function arrayIndexOf<T>(list: ArrayLike<T>, val: any): number;
 export declare function arrayIndexOf(list: any[], val: any): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     arrayIndexOf: typeof arrayIndexOf;
   }
 }

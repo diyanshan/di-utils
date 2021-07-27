@@ -7,7 +7,7 @@ export declare function toFixed(num: number | string | null, digits?: number): s
 export declare function toFixed(num: any, digits?: number): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toFixed: typeof toFixed;
   }
 }

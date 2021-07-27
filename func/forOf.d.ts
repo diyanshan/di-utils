@@ -5,7 +5,7 @@
 export declare function forOf<C>(obj: any, iterate: (this: C, item: any, index: any, obj: any) => boolean, context?: C): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     forOf: typeof forOf;
   }
 }

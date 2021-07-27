@@ -5,7 +5,7 @@
 export declare function isDocument(val: any): val is Document;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isDocument: typeof isDocument;
   }
 }

@@ -7,7 +7,7 @@ export declare function toFormatString(str: string | null, list: any[]): string;
 export declare function toFormatString(str: any, obj: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toFormatString: typeof toFormatString;
   }
 }

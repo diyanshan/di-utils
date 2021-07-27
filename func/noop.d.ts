@@ -4,7 +4,7 @@
 export declare function noop(...args: any[]): void;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     noop: typeof noop;
   }
 }

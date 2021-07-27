@@ -18,7 +18,7 @@ export declare function searchTree(list: any[], iterate: (item: any, index: numb
 export declare function searchTree(list: any, iterate: (item: any, index: number, items: any, path: string, parent: any, nodes: any) => boolean, options?: SearchTreeOptions, context?: any): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     searchTree: typeof searchTree;
   }
 }

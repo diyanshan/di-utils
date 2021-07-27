@@ -7,7 +7,7 @@
 export declare function after<C>(count: number, callback: (this: C, ...args: any[]) => any, context?: C): (this: any,...args: any[]) => any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     after: typeof after;
   }
 }

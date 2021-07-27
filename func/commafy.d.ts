@@ -33,7 +33,7 @@ export interface CommafyOptions {
 export declare function commafy(num: string | number, options?: CommafyOptions): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     commafy: typeof commafy;
   }
 }

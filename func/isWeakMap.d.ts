@@ -5,7 +5,7 @@
 export declare function isWeakMap(val: any): val is WeakMap<any, any>;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isWeakMap: typeof isWeakMap;
   }
 }

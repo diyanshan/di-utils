@@ -5,7 +5,7 @@
 export declare function shuffle<T>(list: T[]): T[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     shuffle: typeof shuffle;
   }
 }

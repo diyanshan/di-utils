@@ -5,7 +5,7 @@
 export declare function isBoolean(val: any): val is boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isBoolean: typeof isBoolean;
   }
 }

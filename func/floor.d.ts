@@ -6,7 +6,7 @@
 export declare function floor(num: string | number, digits?: number): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     floor: typeof floor;
   }
 }

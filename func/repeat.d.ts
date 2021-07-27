@@ -7,7 +7,7 @@ export declare function repeat(str: string, count: number): string;
 export declare function repeat(str: any, count: number): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     repeat: typeof repeat;
   }
 }

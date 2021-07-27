@@ -6,7 +6,7 @@ import { XEUrl } from './url'
 export declare function locat(): XEUrl;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     locat: typeof locat;
   }
 }

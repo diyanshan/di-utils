@@ -4,7 +4,7 @@
 export declare function now(): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     now: typeof now;
   }
 }

@@ -13,7 +13,7 @@ export declare function flatten<T>(list: T[][], deep?: boolean): T[];
 export declare function flatten(list: any[], deep?: boolean): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     flatten: typeof flatten;
   }
 }

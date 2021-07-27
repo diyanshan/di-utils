@@ -14,7 +14,7 @@ export declare function getWhatQuarter(date: string | Date | number, offset: num
 export declare function getWhatQuarter(date: string | Date | number, offset: number, day: number | 'first' | 'last'): Date;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     getWhatQuarter: typeof getWhatQuarter;
   }
 }

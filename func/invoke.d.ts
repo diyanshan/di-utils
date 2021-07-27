@@ -7,7 +7,7 @@
 export declare function invoke(list: any[], path: string[] | string | ((this: any, ...args: any[]) => any)): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     invoke: typeof invoke;
   }
 }

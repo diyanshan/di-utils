@@ -1,93 +1,93 @@
-const XEUtils = require('../func')
+const DIUtils = require('../func')
 
 describe('location functions', () => {
   test('serialize()', () => {
     expect(
-      XEUtils.serialize()
+      DIUtils.serialize()
     ).toEqual('')
     expect(
-      XEUtils.serialize(null)
+      DIUtils.serialize(null)
     ).toEqual('')
     expect(
-      XEUtils.serialize(undefined)
+      DIUtils.serialize(undefined)
     ).toEqual('')
     expect(
-      XEUtils.serialize({})
+      DIUtils.serialize({})
     ).toEqual('')
     expect(
-      XEUtils.serialize([])
+      DIUtils.serialize([])
     ).toEqual('')
     expect(
-      XEUtils.serialize(-1)
+      DIUtils.serialize(-1)
     ).toEqual('')
     expect(
-      XEUtils.serialize({ id: 123, name: 'test1' })
+      DIUtils.serialize({ id: 123, name: 'test1' })
     ).toEqual('id=123&name=test1')
     expect(
-      XEUtils.serialize({ id: 123, name: -1 })
+      DIUtils.serialize({ id: 123, name: -1 })
     ).toEqual('id=123&name=-1')
     expect(
-      XEUtils.serialize({ id: 123, name: 0 })
+      DIUtils.serialize({ id: 123, name: 0 })
     ).toEqual('id=123&name=0')
     expect(
-      XEUtils.serialize({ id: 123, name: false })
+      DIUtils.serialize({ id: 123, name: false })
     ).toEqual('id=123&name=false')
     expect(
-      XEUtils.serialize({ id: 123, name: null })
+      DIUtils.serialize({ id: 123, name: null })
     ).toEqual('id=123&name=')
     expect(
-      XEUtils.serialize({ id: 123, name: undefined })
+      DIUtils.serialize({ id: 123, name: undefined })
     ).toEqual('id=123')
     expect(
-      XEUtils.serialize({ list: [11, 22] })
+      DIUtils.serialize({ list: [11, 22] })
     ).toEqual('list%5B%5D=11&list%5B%5D=22')
     expect(
-      XEUtils.serialize({ list: [{ id: 11, name: 't1' }, { id: 44, name: 't2' }] })
+      DIUtils.serialize({ list: [{ id: 11, name: 't1' }, { id: 44, name: 't2' }] })
     ).toEqual('list%5B0%5D%5Bid%5D=11&list%5B0%5D%5Bname%5D=t1&list%5B1%5D%5Bid%5D=44&list%5B1%5D%5Bname%5D=t2')
   })
 
   test('unserialize()', () => {
     expect(
-      XEUtils.unserialize()
+      DIUtils.unserialize()
     ).toEqual({})
     expect(
-      XEUtils.unserialize({})
+      DIUtils.unserialize({})
     ).toEqual({})
     expect(
-      XEUtils.unserialize([])
+      DIUtils.unserialize([])
     ).toEqual({})
     expect(
-      XEUtils.unserialize(null)
+      DIUtils.unserialize(null)
     ).toEqual({})
     expect(
-      XEUtils.unserialize(undefined)
+      DIUtils.unserialize(undefined)
     ).toEqual({})
     expect(
-      XEUtils.unserialize(0)
+      DIUtils.unserialize(0)
     ).toEqual({})
     expect(
-      XEUtils.unserialize(-1)
+      DIUtils.unserialize(-1)
     ).toEqual({})
     expect(
-      XEUtils.unserialize('id=123&name=test1')
+      DIUtils.unserialize('id=123&name=test1')
     ).toEqual({ id: '123', name: 'test1' })
     expect(
-      XEUtils.unserialize('id=123&name=false')
+      DIUtils.unserialize('id=123&name=false')
     ).toEqual({ id: '123', name: 'false' })
     expect(
-      XEUtils.unserialize('id=123&name=0')
+      DIUtils.unserialize('id=123&name=0')
     ).toEqual({ id: '123', name: '0' })
     expect(
-      XEUtils.unserialize('id=123&name=null')
+      DIUtils.unserialize('id=123&name=null')
     ).toEqual({ id: '123', name: 'null' })
     expect(
-      XEUtils.unserialize('id=123&name=')
+      DIUtils.unserialize('id=123&name=')
     ).toEqual({ id: '123', name: '' })
   })
 
   test('parseUrl()', () => {
     expect(
-      XEUtils.parseUrl('http://xuliangzhan.com')
+      DIUtils.parseUrl('http://xuliangzhan.com')
     ).toEqual({
       hash: '',
       hashKey: '',
@@ -104,7 +104,7 @@ describe('location functions', () => {
       searchQuery: {}
     })
     expect(
-      XEUtils.parseUrl('http://127.0.0.1/demo')
+      DIUtils.parseUrl('http://127.0.0.1/demo')
     ).toEqual({
       hash: '',
       hashKey: '',
@@ -121,7 +121,7 @@ describe('location functions', () => {
       searchQuery: {}
     })
     expect(
-      XEUtils.parseUrl('http://localhost:8080/demo?id=123')
+      DIUtils.parseUrl('http://localhost:8080/demo?id=123')
     ).toEqual({
       hash: '',
       hashKey: '',
@@ -140,7 +140,7 @@ describe('location functions', () => {
       }
     })
     expect(
-      XEUtils.parseUrl('http://localhost:8080/demo/#/home?id=123')
+      DIUtils.parseUrl('http://localhost:8080/demo/#/home?id=123')
     ).toEqual({
       hash: '#/home?id=123',
       hashKey: '/home',
@@ -159,7 +159,7 @@ describe('location functions', () => {
       searchQuery: {}
     })
     expect(
-      XEUtils.parseUrl('http://www.xuliangzhan.com:8080/demo/?v=1#/home?id=123')
+      DIUtils.parseUrl('http://www.xuliangzhan.com:8080/demo/?v=1#/home?id=123')
     ).toEqual({
       hash: '#/home?id=123',
       hashKey: '/home',

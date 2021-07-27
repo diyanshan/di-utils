@@ -57,7 +57,7 @@ export declare function parseUrl(ulr: string): XEUrl;
 export declare function parseUrl(ulr: any): XEUrl;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     parseUrl: typeof parseUrl;
   }
 }

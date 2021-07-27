@@ -13,7 +13,7 @@ export declare function remove<T, C>(list: T[], iterate: number | string | ((thi
 export declare function remove<C>(obj: any, iterate: number | string | ((this: C, item: any, key: string, obj: any) => boolean), context?: C): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     remove: typeof remove;
   }
 }

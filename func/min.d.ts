@@ -6,7 +6,7 @@
 export declare function min<T, U>(list: T[], iterate: string | number | ((item: T, index: number, list: T[]) => U)): T | U;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     min: typeof min;
   }
 }

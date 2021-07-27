@@ -1,7 +1,7 @@
 'use strict'
 
 // 核心
-var XEUtils = require('./ctor')
+var DIUtils = require('./ctor')
 
 // 对象相关的方法
 var assign = require('./assign')
@@ -192,7 +192,7 @@ var locat = require('./locat')
 var cookie = require('./cookie')
 var browse = require('./browse')
 
-assign(XEUtils, {
+assign(DIUtils, {
   // object
   assign: assign,
   objectEach: objectEach,
@@ -384,4 +384,4 @@ assign(XEUtils, {
   cookie: cookie
 })
 
-module.exports = XEUtils
+module.exports = DIUtils

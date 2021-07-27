@@ -20,7 +20,7 @@ export declare function clear<T>(obj: T, defs: any): T;
 export declare function clear<T, U>(obj: T, defs: any, assigns: U): T & U;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     clear: typeof clear;
   }
 }

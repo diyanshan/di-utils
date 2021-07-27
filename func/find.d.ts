@@ -15,7 +15,7 @@ export declare function find<T, C>(list: T[], iterate: (this: C, item: T, index:
 export declare function find<T, C>(obj: T, iterate: (this: C, item: any, key: string, obj: T) => boolean, context?: C): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     find: typeof find;
   }
 }

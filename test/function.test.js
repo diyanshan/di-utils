@@ -1,14 +1,14 @@
-const XEUtils = require('../func')
+const DIUtils = require('../func')
 
 describe('Function functions', () => {
   test('noop()', () => {
     expect(
-      [11, 22, 33].map(XEUtils.noop)
+      [11, 22, 33].map(DIUtils.noop)
     ).toEqual([undefined, undefined, undefined])
   })
 
   test('delay()', done => {
-    XEUtils.delay(function (name) {
+    DIUtils.delay(function (name) {
       expect(
         name
       ).toEqual('test11')
@@ -22,7 +22,7 @@ describe('Function functions', () => {
         complete({ data: url })
       }, 200)
     }
-    let finish = XEUtils.after(3, function (rests) {
+    let finish = DIUtils.after(3, function (rests) {
       expect(
         rests
       ).toEqual([{ data: '/api/list1' }, { data: '/api/list2' }, { data: '/api/list3' }])
@@ -34,7 +34,7 @@ describe('Function functions', () => {
   })
 
   test('before()', done => {
-    let meeting = XEUtils.before(4, function (rests, val) {
+    let meeting = DIUtils.before(4, function (rests, val) {
       if (val === 222) {
         expect(
           rests
@@ -49,7 +49,7 @@ describe('Function functions', () => {
   })
 
   test('bind()', () => {
-    let rest = XEUtils.bind(function (val) {
+    let rest = DIUtils.bind(function (val) {
       return this.name + ' = ' + val
     }, { name: 'test' })
     expect(
@@ -61,7 +61,7 @@ describe('Function functions', () => {
   })
 
   test('once()', () => {
-    let rest = XEUtils.once(function (val) {
+    let rest = DIUtils.once(function (val) {
       return this.name + ' = ' + val
     }, { name: 'test' })
     expect(

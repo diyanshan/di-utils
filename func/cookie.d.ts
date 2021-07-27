@@ -91,7 +91,7 @@ export declare function cookie(name: string, value: any): XECookie;
 export declare function cookie(name: string, value: any, options: CookieOptions): XECookie;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     cookie: typeof cookie;
   }
 }

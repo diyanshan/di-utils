@@ -1,11 +1,4 @@
-# xe-utils
-
-[![gitee star](https://gitee.com/x-extends/xe-utils/badge/star.svg?theme=dark)](https://gitee.com/x-extends/xe-utils/stargazers)
-[![npm version](https://img.shields.io/npm/v/xe-utils.svg?style=flat-square)](https://www.npmjs.com/package/xe-utils)
-[![npm build](https://travis-ci.com/x-extends/vxe-utils.svg?branch=master)](https://travis-ci.com/x-extends/xe-utils)
-[![npm downloads](https://img.shields.io/npm/dm/xe-utils.svg?style=flat-square)](http://npm-stat.com/charts.html?package=xe-utils)
-[![gzip size: JS](http://img.badgesize.io/https://unpkg.com/xe-utils/dist/xe-utils.umd.min.js?compression=gzip&label=gzip%20size:%20JS)](https://unpkg.com/xe-utils/dist/xe-utils.umd.min.js)
-[![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+# di-utils
 
 JavaScript 函数库、工具类
 
@@ -22,29 +15,29 @@ JavaScript 函数库、工具类
 ## Installing
 
 ```shell
-npm install xe-utils
+npm install di-utils
 ```
 
 Using nodejs
 
 ```javascript
-const XEUtils = require('xe-utils')
+const DIUtils = require('di-utils')
 ```
 
-Get on [unpkg](https://unpkg.com/xe-utils/) and [cdnjs](https://cdn.jsdelivr.net/npm/xe-utils/)
+<!-- Get on [unpkg](https://unpkg.com/xe-utils/) and [cdnjs](https://cdn.jsdelivr.net/npm/xe-utils/) -->
 
 ```HTML
-<script src="https://cdn.jsdelivr.net/npm/xe-utils"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/xe-utils"></script> -->
 ```
 
 ### Import all methods
 
 ```javascript
-import XEUtils from 'xe-utils'
+import DIUtils from 'di-utils'
 
-XEUtils.toDateString(Date.now())
+DIUtils.toDateString(Date.now())
 // 2018-01-01 10:30:28
-XEUtils.toStringDate('2018-01-01 10:30:00')
+DIUtils.toStringDate('2018-01-01 10:30:00')
 // Mon Jan 01 2018 10:30:00 GMT+0800 (中国标准时间)
 ```
 
@@ -54,8 +47,8 @@ XEUtils.toStringDate('2018-01-01 10:30:00')
 单个导入，包的大小 gzip >≈ 60B+，按需导入
 
 ```javascript
-import each from 'xe-utils/each'
-import toDateString from 'xe-utils/toDateString'
+import each from 'di-utils/each'
+import toDateString from 'di-utils/toDateString'
 
 each({ a: 11, b: 22, c: 33 }, function (item, key){
   console.log(item)
@@ -68,35 +61,35 @@ toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
 ```
 
 ```javascript
-import XEUtils from 'xe-utils/ctor'
-import each from 'xe-utils/each'
-import toDateString from 'xe-utils/toDateString'
-import toFixedNumber from 'xe-utils/toFixedNumber'
+import DIUtils from 'di-utils/ctor'
+import each from 'di-utils/each'
+import toDateString from 'di-utils/toDateString'
+import toFixedNumber from 'di-utils/toFixedNumber'
 
-XEUtils.mixin({
+DIUtils.mixin({
   each,
   toDateString,
   toFixedNumber
 })
-XEUtils.toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
+DIUtils.toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
 // 2018-01-01 10:30:28
 ```
 
 按功能导入所有方法
 
 ```javascript
-import XEUtils from 'xe-utils/ctor'
-import objectMethods from 'xe-utils/object'
-import arrayMethods from 'xe-utils/array'
-import baseMethods from 'xe-utils/base'
-import numberMethods from 'xe-utils/number'
-import dateMethods from 'xe-utils/date'
-import stringMethods from 'xe-utils/string'
-import functionMethods from 'xe-utils/function'
-import urlMethods from 'xe-utils/url'
-import webMethods from 'xe-utils/web'
+import DIUtils from 'di-utils/ctor'
+import objectMethods from 'di-utils/object'
+import arrayMethods from 'di-utils/array'
+import baseMethods from 'di-utils/base'
+import numberMethods from 'di-utils/number'
+import dateMethods from 'di-utils/date'
+import stringMethods from 'di-utils/string'
+import functionMethods from 'di-utils/function'
+import urlMethods from 'di-utils/url'
+import webMethods from 'di-utils/web'
 
-XEUtils.mixin(
+DIUtils.mixin(
   // Object
   objectMethods,
   // Array
@@ -118,6 +111,6 @@ XEUtils.mixin(
 )
 ```
 
-## License
+<!-- ## License
 
-[MIT](LICENSE) © 2017-present, Xu Liangzhan
+[MIT](LICENSE) © 2017-present-->

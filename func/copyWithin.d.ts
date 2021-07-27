@@ -15,7 +15,7 @@ export declare function copyWithin<T>(array: T[], target: number): T[];
 export declare function copyWithin<T>(array: T[], target: number, start: Number, end?: number): T[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     copyWithin: typeof copyWithin;
   }
 }

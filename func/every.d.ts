@@ -16,7 +16,7 @@ export declare function every<T, C>(list: T[], iterate: (this: C, item: T, index
 export declare function every<T, C>(list: T, iterate: (this: C, item: any, key: string, list: T) => boolean, context?: C): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     every: typeof every;
   }
 }

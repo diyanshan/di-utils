@@ -7,7 +7,7 @@
 export declare function pluck(array: any[], key: string | number): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     pluck: typeof pluck;
   }
 }

@@ -23,7 +23,7 @@ export declare function toArrayTree<T>(list: T[], options?: ToArrayTreeOptions<T
 export declare function toArrayTree(list: any, options?: ToArrayTreeOptions<any>): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toArrayTree: typeof toArrayTree;
   }
 }

@@ -12,7 +12,7 @@ export declare function ceil(num: string | number): number;
 export declare function ceil(num: string | number, digits: number): number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     ceil: typeof ceil;
   }
 }

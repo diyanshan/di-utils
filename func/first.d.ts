@@ -6,7 +6,7 @@ export declare function first<T>(list: T[] | ArrayLike<T>): T;
 export declare function first(obj: any): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     first: typeof first;
   }
 }

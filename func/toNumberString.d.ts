@@ -6,7 +6,7 @@ export declare function toNumberString(num: number | string | null): string;
 export declare function toNumberString(num: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     toNumberString: typeof toNumberString;
   }
 }

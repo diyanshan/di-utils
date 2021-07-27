@@ -14,7 +14,7 @@ export declare function sample<T>(array: T[]): T;
 export declare function sample<T>(array: T[], number: number): T[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     sample: typeof sample;
   }
 }

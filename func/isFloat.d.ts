@@ -5,7 +5,7 @@
 export declare function isFloat(val: any): val is number;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isFloat: typeof isFloat;
   }
 }

@@ -5,7 +5,7 @@
 export declare function zip(...arrays: any[]): any[];
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     zip: typeof zip;
   }
 }

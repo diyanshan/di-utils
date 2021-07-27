@@ -9,7 +9,7 @@ export declare function template(str: string, args: any | any[], options: { tmpl
 export declare function template(str: any, args: any | any[], options: { tmplRE?: RegExp }): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     template: typeof template;
   }
 }

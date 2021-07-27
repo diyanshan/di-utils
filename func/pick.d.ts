@@ -6,7 +6,7 @@
 export declare function pick(obj: any, array: string[]): any;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     pick: typeof pick;
   }
 }

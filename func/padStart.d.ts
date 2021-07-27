@@ -8,7 +8,7 @@ export declare function padStart(str: string, targetLength: number, padString?: 
 export declare function padStart(str: any, targetLength: number, padString?: any): string;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     padStart: typeof padStart;
   }
 }

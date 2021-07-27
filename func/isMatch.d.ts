@@ -6,7 +6,7 @@
 export declare function isMatch(obj: any, source: any): boolean;
 
 declare module './ctor' {
-  interface XEUtilsMethods {
+  interface DIUtilsMethods {
     isMatch: typeof isMatch;
   }
 }
