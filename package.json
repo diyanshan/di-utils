@@ -1,10 +1,10 @@
 {
   "name": "di-shan-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript 函数库、工具类",
   "main": "dist/index.js",
-  "unpkg": "dist/di-utils.umd.min.js",
-  "jsdelivr": "dist/di-utils.umd.min.js",
+  "unpkg": "",
+  "jsdelivr": "",
   "typings": "dist/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",

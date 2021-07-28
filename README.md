@@ -1,4 +1,4 @@
-# di-utils
+# di-shan-utils
 
 JavaScript 函数库、工具类
 
@@ -15,13 +15,13 @@ JavaScript 函数库、工具类
 ## Installing
 
 ```shell
-npm install di-utils
+npm install di-shan-utils
 ```
 
 Using nodejs
 
 ```javascript
-const DIUtils = require('di-utils')
+const DIUtils = require('di-shan-utils')
 ```
 
 <!-- Get on [unpkg](https://unpkg.com/xe-utils/) and [cdnjs](https://cdn.jsdelivr.net/npm/xe-utils/) -->
@@ -33,7 +33,7 @@ const DIUtils = require('di-utils')
 ### Import all methods
 
 ```javascript
-import DIUtils from 'di-utils'
+import DIUtils from 'di-shan-utils'
 
 DIUtils.toDateString(Date.now())
 // 2018-01-01 10:30:28
@@ -47,8 +47,8 @@ DIUtils.toStringDate('2018-01-01 10:30:00')
 单个导入，包的大小 gzip >≈ 60B+，按需导入
 
 ```javascript
-import each from 'di-utils/each'
-import toDateString from 'di-utils/toDateString'
+import each from 'di-shan-utils/each'
+import toDateString from 'di-shan-utils/toDateString'
 
 each({ a: 11, b: 22, c: 33 }, function (item, key){
   console.log(item)
@@ -61,10 +61,10 @@ toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
 ```
 
 ```javascript
-import DIUtils from 'di-utils/ctor'
-import each from 'di-utils/each'
-import toDateString from 'di-utils/toDateString'
-import toFixedNumber from 'di-utils/toFixedNumber'
+import DIUtils from 'di-shan-utils/ctor'
+import each from 'di-shan-utils/each'
+import toDateString from 'di-shan-utils/toDateString'
+import toFixedNumber from 'di-shan-utils/toFixedNumber'
 
 DIUtils.mixin({
   each,
@@ -78,16 +78,16 @@ DIUtils.toDateString(Date.now(), 'yyyy-MM-dd HH:mm:ss')
 按功能导入所有方法
 
 ```javascript
-import DIUtils from 'di-utils/ctor'
-import objectMethods from 'di-utils/object'
-import arrayMethods from 'di-utils/array'
-import baseMethods from 'di-utils/base'
-import numberMethods from 'di-utils/number'
-import dateMethods from 'di-utils/date'
-import stringMethods from 'di-utils/string'
-import functionMethods from 'di-utils/function'
-import urlMethods from 'di-utils/url'
-import webMethods from 'di-utils/web'
+import DIUtils from 'di-shan-utils/ctor'
+import objectMethods from 'di-shan-utils/object'
+import arrayMethods from 'di-shan-utils/array'
+import baseMethods from 'di-shan-utils/base'
+import numberMethods from 'di-shan-utils/number'
+import dateMethods from 'di-shan-utils/date'
+import stringMethods from 'di-shan-utils/string'
+import functionMethods from 'di-shan-utils/function'
+import urlMethods from 'di-shan-utils/url'
+import webMethods from 'di-shan-utils/web'
 
 DIUtils.mixin(
   // Object
