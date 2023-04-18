@@ -10,7 +10,6 @@ JavaScript 函数库、工具类
 
 ## Docs
 
-[To view the document](https://tansuo-d.com/di-utils/) [查看文档](https://tansuo-d.com/di-utils/)
 
 ## Installing
 
@@ -24,11 +23,7 @@ Using nodejs
 const DIUtils = require('di-shan-utils')
 ```
 
-<!-- Get on [unpkg](https://unpkg.com/xe-utils/) and [cdnjs](https://cdn.jsdelivr.net/npm/xe-utils/) -->
 
-```HTML
-<!-- <script src="https://cdn.jsdelivr.net/npm/xe-utils"></script> -->
-```
 
 ### Import all methods
 
