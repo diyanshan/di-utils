@@ -2,10 +2,10 @@
   "name": "di-shan-utils",
   "version": "1.0.4",
   "description": "JavaScript 函数库、工具类",
-  "main": "/index.js",
+  "main": "dist/index.js",
   "unpkg": "",
   "jsdelivr": "",
-  "typings": "/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "update": "npm install --legacy-peer-deps",
     "dev": "vue-cli-service serve",
