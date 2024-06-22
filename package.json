@@ -1,6 +1,6 @@
 {
   "name": "di-shan-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "JavaScript 函数库、工具类",
   "main": "dist/index.js",
   "unpkg": "",
